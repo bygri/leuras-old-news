@@ -1,0 +1,5 @@
+Title: Burlington Palace Hotel
+Key: burlington-palace-hotel
+Category: Place
+----
+This is a thing what never got built.

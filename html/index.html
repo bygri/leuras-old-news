@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}Leura's Old News{% endblock %}
+{% block meta_description %}Collected historical newspaper articles referencing
+Leura, Blue Mountains, Australia.{% endblock %}
+
+{% block content %}
+    <div class='row'>
+        <div class='col-xs-12'>
+            <p>The National Library of Australia, with the assistance of the Blue
+                Mountains City Library, the State Library of NSW and Springwood
+                Historians, has recently released digitised versions of
+                newspapers from as early as 1889 using the NLA's
+                <a href='http://trove.nla.gov.au'>Trove</a> service.</p>
+            <p>As a Leura resident, I am interested in the early history of the
+                township and decided to read my way through every reference to
+                Leura I could find. I figured I might as well transcribe and
+                annotate as many of these articles along the way as I can so
+                other people might have an easier time of it in future. I hope
+                you find this page useful.</p>
+            <p>I have a
+                <a href='https://www.facebook.com/pages/Leuras-Old-News/1166842956665616'>
+                Facebook Page</a> for this site where I will occasionally post
+                interesting tidbits I come across. Follow me there to keep
+                up-to-date.</p>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-xs-12'>
+           <h2>Recently Added Articles</h2>
+           {% for article in recent_articles %}
+           <p>[{{article.date_updated}}] <a href='{{article.key}}.html'>{{article.title}}</a>. {{article.category}}. {{article.pub_date}}, <i>{{article.source}}</i>, page {{article.page}}.</p>
+           {% endfor %}
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-xs-12'>
+           <h2>Browse Articles by Topic</h2>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-sm-4'>
+            <h3>By Person</h3>
+            <ul class="list-unstyled">
+                {% for tag in person_tags %}
+                <li><a href='{{tag.key}}.html'>{{tag.title}}</a> <small>{{tag.precis}}</small></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class='col-sm-4'>
+            <h3>By Place</h3>
+            <ul class="list-unstyled">
+                {% for tag in place_tags %}
+                <li><a href='{{tag.key}}.html'>{{tag.title}}</a> <small>{{tag.precis}}</small></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class='col-sm-4'>
+            <h3>By Event</h3>
+            <ul class="list-unstyled">
+                {% for tag in event_tags %}
+                <li><a href='{{tag.key}}.html'>{{tag.title}}</a> <small>{{tag.precis}}</small></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}{{article.title}} | Leura's Old News{% endblock %}
+{% block meta_description %}{{article.precis}}{% endblock %}
+
+{% block breadcrumb %}<li>{{article.title}}</li>{% endblock %}
+
+{% block content %}
+    <div class='row'>
+        <div class='col-sm-8'>
+            <!-- <p style='font-family: "Droid Serif"'>Saturday 25 May 1889, <i>Katoomba Times</i>, page 4.</p> -->
+            <p>{{article.pub_date}}, <i>{{article.source}}</i>, page {{article.page}}.</p>
+            <div class='article'>
+                {{article.body_html()}}
+            </div>
+        </div>
+        <div class='col-sm-4'>
+            <div class="panel panel-default">
+              <div class='panel-body'>
+                <p><b>Tagged topics</b></p>
+                {% for tag in article.tags %}
+                <p><a href='{{tag.key}}.html'>{{tag.title}}</a></p>
+                {% endfor %}
+                <p><b>Trove ID</b></p>
+                <p style='font-family: "Droid Serif"'><a href='http://nla.gov.au/nla.news-article{{article.trove_id}}'>{{article.trove_id}}</a></p>
+              </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

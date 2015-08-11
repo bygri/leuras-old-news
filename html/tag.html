@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}{{tag.title}} | Leura's Old News{% endblock %}
+{% block meta_description %}{{tag.precis}}{% endblock %}
+{% block breadcrumb %}<li>Articles for {{tag.title}}</li>{% endblock %}
+
+{% block content %}
+    <div class='row'>
+        <div class='col-xs-12'>
+            {% for article in tag.articles %}
+            <p><a href='{{article.key}}.html'>{{article.title}}</a>. {{article.category}}. {{article.pub_date}}, <i>{{article.source}}</i>, page {{article.page}}.</p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
