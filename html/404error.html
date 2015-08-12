@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}404 | Leura's Old News{% endblock %}
+
+{% block content %}
+    <div class='row'>
+        <div class='col-xs-12'>
+            <h2>404 File Not Found</h2>
+            <p>The requested page is not available. There's a few reasons why
+                this might be the case.</p>
+            <p>First, to save money this site is hosted on a Content Delivery
+                Network (CDN) which only checks for updates every 15 minutes.
+                This means that it might take up to 15 minutes for new content
+                to be available online, even if other pages link to that
+                content. So, wait 15 minutes and try again.</p>
+            <p>Otherwise, this site is a very early work-in-progress and some
+                links may change. If the item you are after is not available
+                within 15 minutes, try finding it again from the <a href='/'>
+                home page</a>. You may also be able to find it directly on the
+                Trove website.</p>
+        </div>
+    </div>
+{% endblock %}

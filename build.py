@@ -138,7 +138,10 @@ def build():
         ## Then generate tag pages
         for tag in select(t for t in Tag):
             template = jenv.get_template('tag.html')
-            html = template.render(tag=tag)
+            html = template.render(
+                tag=tag,
+                articles=tag.articles.order_by(Article.pub_date)
+            )
             with open('www/{}.html'.format(tag.key), 'w') as fp:
                 fp.write(html)
         ## Now generate index page
@@ -150,6 +153,11 @@ def build():
             recent_articles=select(a for a in Article).order_by(desc(Article.date_updated))[:5]
         )
         with open('www/index.html', 'w') as fp:
+            fp.write(html)
+        ## 404 error page
+        template = jenv.get_template('404error.html')
+        html = template.render()
+        with open('www/404error.html', 'w') as fp:
             fp.write(html)
 
 if __name__ == '__main__':
