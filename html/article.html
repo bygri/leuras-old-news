@@ -7,12 +7,29 @@
 
 {% block content %}
     <div class='row'>
-        <div class='col-sm-8'>
+        <div class='col-xs-12'>
             <!-- <p style='font-family: "Droid Serif"'>Saturday 25 May 1889, <i>Katoomba Times</i>, page 4.</p> -->
             <p>{{article.pub_date}}, <i>{{article.source}}</i>, page {{article.page}}.</p>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-sm-8'>
+            {% if article.has_image %}
+            <a href='img/{{article.key}}.jpg' class='thumbnail'>
+                <img src='img/{{article.key}}.jpg'>
+            </a>
+            {% endif %}
+            {% if article.body %}
             <div class='article'>
                 {{article.body_html()}}
             </div>
+            {% else %}
+            <div class='article'>
+                <h2>No transcription available.</h2>
+                <p>Would you like to contribute one? Use the Facebook or Github
+                    links at the bottom of the page.</p>
+            </div>
+            {% endif %}
         </div>
         <div class='col-sm-4'>
             <div class="panel panel-default">

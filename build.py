@@ -37,6 +37,7 @@ def build():
         body = Optional(str)
         comment = Optional(str)
         tags = Set('Tag')
+        has_image = Required(bool)
         def body_html(self):
             '''self.body as markdown-to-HTML.'''
             if not self.body: return None
@@ -116,6 +117,7 @@ def build():
                     if not 'comment' in attrs:
                         attrs['comment'] = ''
                     attrs['comment'] += line
+            attrs['has_image'] = os.path.exists('article-img/{}.jpg'.format(attrs['key']))
             Article(**attrs)
     # Second phase - use the items in the database to generate HTML files
     ## Create/clear the www folder
@@ -125,6 +127,7 @@ def build():
         pass
     ## Copy over any static files
     shutil.copytree('static', 'www')
+    shutil.copytree('article-img', 'www/img')
     ## Now generate some html
     ## TODO: I also need a sitemap.xml
     jenv = jinja2.Environment(loader=jinja2.FileSystemLoader('html'))
