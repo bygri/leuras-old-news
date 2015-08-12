@@ -8,7 +8,7 @@
     <div class='row'>
         <div class='col-xs-12'>
             {% for article in articles %}
-            <p><a href='{{article.key}}.html'>{{article.title}}</a>. {{article.category}}. {{article.pub_date}}, <i>{{article.source}}</i>, page {{article.page}}.</p>
+            <p><a href='{{article.key}}.html'>{{article.title}}</a>. {{article.category}}. {{article.pub_date}}, <i>{{article.source}}</i>, page {{article.page}}. {% if article.precis %}<br><i>{{article.precis}}</i>{% endif %}</p>
             {% endfor %}
         </div>
     </div>
