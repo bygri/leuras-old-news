@@ -40,7 +40,7 @@ Leura, Blue Mountains, Australia.{% endblock %}
     </div>
     <div class='row'>
         <div class='col-sm-4'>
-            <h3>By Person</h3>
+            <h3><span class='fa fa-user'></span> By Person</h3>
             <ul class="list-unstyled">
                 {% for tag in person_tags %}
                 <li><a href='{{tag.key}}.html'>{{tag.title}}</a> <small>{{tag.precis}}</small></li>
@@ -48,7 +48,7 @@ Leura, Blue Mountains, Australia.{% endblock %}
             </ul>
         </div>
         <div class='col-sm-4'>
-            <h3>By Place</h3>
+            <h3><span class='fa fa-map-marker'></span> By Place</h3>
             <ul class="list-unstyled">
                 {% for tag in place_tags %}
                 <li><a href='{{tag.key}}.html'>{{tag.title}}</a> <small>{{tag.precis}}</small></li>
@@ -56,7 +56,7 @@ Leura, Blue Mountains, Australia.{% endblock %}
             </ul>
         </div>
         <div class='col-sm-4'>
-            <h3>By Event</h3>
+            <h3><span class='fa fa-calendar'></span> By Event</h3>
             <ul class="list-unstyled">
                 {% for tag in event_tags %}
                 <li><a href='{{tag.key}}.html'>{{tag.title}}</a> <small>{{tag.precis}}</small></li>

@@ -36,7 +36,14 @@
               <div class='panel-body'>
                 <p><b>Tagged topics</b></p>
                 {% for tag in article.tags %}
-                <p><a href='{{tag.key}}.html'>{{tag.title}}</a></p>
+                <p>
+                    {% if tag.category == "Place" %}<span class='fa fa-map-marker'></span>
+                    {% elif tag.category == "Person" %}<span class='fa fa-user'></span>
+                    {% elif tag.category == "Event" %}<span class='fa fa-calendar-o'></span>
+                    {% else %}<span class='fa fa-tag'></span>
+                    {% endif %}
+                    <a href='{{tag.key}}.html'>{{tag.title}}</a>
+                </p>
                 {% endfor %}
                 <p><b>Trove ID</b></p>
                 <p><a href='http://nla.gov.au/nla.news-article{{article.trove_id}}'>{{article.trove_id}}</a></p>
