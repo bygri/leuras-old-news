@@ -29,7 +29,7 @@ def build():
         title = Required(str)
         precis = Optional(str)
         category = Required(str)
-        source = Required(str)
+        publication = Required('Publication')
         page = Required(str)
         pub_date = Required(datetime.date)
         date_updated = Required(datetime.date)
@@ -38,14 +38,24 @@ def build():
         comment = Optional(str)
         tags = Set('Tag')
         has_image = Required(bool)
+        @property
         def body_html(self):
             '''self.body as markdown-to-HTML.'''
             if not self.body: return None
             return markdown.markdown(self.body)
+        @property
         def comment_html(self):
             '''self.comment as markdown-to-HTML.'''
             if not self.comment: return None
             return markdown.markdown(self.comment)
+        @property
+        def url(self):
+            '''URL for the article detail page.'''
+            return '/{}/{}/{}.html'.format(
+                self.publication.key,
+                self.pub_date.strftime('%Y-%m-%d'),
+                self.key,
+            )
 
     class Tag(db.Entity):
         key = PrimaryKey(str)
@@ -54,12 +64,51 @@ def build():
         category = Required(str)
         comment = Optional(str)
         articles = Set('Article')
+        @property
         def comment_html(self):
             '''self.comment as markdown-to-HTML.'''
             if not self.comment: return None
             return markdown.markdown(self.comment)
+        @property
+        def url(self):
+            '''URL for the tag overview page.'''
+            return '/{}.html'.format(self.key)
+
+    class Publication(db.Entity):
+        key = PrimaryKey(str)
+        title = Required(str)
+        comment = Optional(str)
+        articles = Set('Article')
+        @property
+        def comment_html(self):
+            '''self.comment as markdown-to-HTML.'''
+            if not self.comment: return None
+            return markdown.markdown(self.comment)
+        @property
+        def url(self):
+            '''URL for the publication overview page.'''
+            return '/{}/'.format(self.key)
 
     db.generate_mapping(create_tables=True)
+
+    ## Insert publications
+    for path in glob.glob('publications/*.txt'):
+        with open(path, 'r') as fp, db_session:
+            attrs = {}
+            section = 0
+            for line in fp.readlines():
+                if line[:4] == '----':
+                    section += 1
+                elif section == 0: # meta
+                    key, value = meta_from(line)
+                    if key == 'Title': attrs['title'] = value
+                    elif key == 'Key': attrs['key'] = value
+                    elif key == None: continue
+                elif section == 1: # comment
+                    if not 'comment' in attrs:
+                        attrs['comment'] = ''
+                    attrs['comment'] += line
+            Publication(**attrs)
 
     ## Insert all tags into the database
     for path in glob.glob('tags/*.txt'):
@@ -100,7 +149,11 @@ def build():
                     elif key == 'Title': attrs['title'] = value
                     elif key == 'Key': attrs['key'] = value
                     elif key == 'Category': attrs['category'] = value
-                    elif key == 'Source': attrs['source'] = value
+                    elif key == 'Publication':
+                        publication = get(p for p in Publication if p.key == value)
+                        if not publication:
+                            raise Exception('Missing description file for publication "{}"'.format(value))
+                        attrs['publication'] = publication
                     elif key == 'Page': attrs['page'] = value
                     elif key == 'PubDate': attrs['pub_date'] = datetime.datetime.strptime(value, '%Y-%m-%d').date()
                     elif key == 'DateUpdated': attrs['date_updated'] = datetime.datetime.strptime(value, '%Y-%m-%d').date()
@@ -136,7 +189,9 @@ def build():
         for article in select(a for a in Article):
             template = jenv.get_template('article.html')
             html = template.render(article=article)
-            with open('www/{}.html'.format(article.key), 'w') as fp:
+            path = 'www' + article.url
+            os.makedirs(os.path.dirname(path), exist_ok=True)
+            with open(path, 'w') as fp:
                 fp.write(html)
         ## Then generate tag pages
         for tag in select(t for t in Tag):
@@ -145,7 +200,20 @@ def build():
                 tag=tag,
                 articles=tag.articles.order_by(Article.pub_date)
             )
-            with open('www/{}.html'.format(tag.key), 'w') as fp:
+            path = 'www' + tag.url
+            os.makedirs(os.path.dirname(path), exist_ok=True)
+            with open(path, 'w') as fp:
+                fp.write(html)
+        ## Publication index page
+        for publication in select(p for p in Publication):
+            template = jenv.get_template('publication.html')
+            html = template.render(
+                publication=publication,
+                articles=publication.articles.order_by(Article.pub_date)
+            )
+            path = 'www' + publication.url + 'index.html'
+            os.makedirs(os.path.dirname(path), exist_ok=True)
+            with open(path, 'w') as fp:
                 fp.write(html)
         ## Now generate index page
         template = jenv.get_template('index.html')
@@ -153,9 +221,17 @@ def build():
             person_tags=select(t for t in Tag if t.category == 'Person').order_by(Tag.title),
             place_tags=select(t for t in Tag if t.category == 'Place').order_by(Tag.title),
             event_tags=select(t for t in Tag if t.category == 'Event').order_by(Tag.title),
+            business_tags=select(t for t in Tag if t.category == 'Business').order_by(Tag.title),
             recent_articles=select(a for a in Article).order_by(desc(Article.date_updated))[:5]
         )
         with open('www/index.html', 'w') as fp:
+            fp.write(html)
+        ## Recently Added
+        template = jenv.get_template('recents.html')
+        html = template.render(
+            articles=select(a for a in Article).order_by(desc(Article.date_updated))[:20]
+        )
+        with open('www/recents.html', 'w') as fp:
             fp.write(html)
         ## 404 error page
         template = jenv.get_template('404error.html')

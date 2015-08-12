@@ -1,7 +1,7 @@
 Title: The New Model Township of Leura
 Key: 194114254b
 Category: Advertising
-Source: Katoomba Times
+Publication: KatoombaTimes
 Page: 3
 PubDate: 1889-05-25
 DateUpdated: 2015-08-12

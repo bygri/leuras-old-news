@@ -1,7 +1,7 @@
 Title: Local Jottings
 Key: 194116691c
 Category: Jottings
-Source: Katoomba Times
+Publication: KatoombaTimes
 Page: 2
 PubDate: 1889-06-15
 DateUpdated: 2015-08-12

@@ -1,7 +1,7 @@
 Title: Railway Schedule
 Key: 194114263a
 Category: Article
-Source: Katoomba Times
+Publication: KatoombaTimes
 Page: 2
 PubDate: 1889-05-25
 DateUpdated: 2015-08-12

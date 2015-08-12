@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
-{% block title %}{{tag.title}} | Leura's Old News{% endblock %}
-{% block meta_description %}{{tag.precis}}{% endblock %}
-{% block breadcrumb %}<li>Articles for {{tag.title}}</li>{% endblock %}
+{% block title %}{{publication.title}} | Leura's Old News{% endblock %}
+{% block meta_description %}A list of articles relating to Leura in the {{publication.title}}.{% endblock %}
+{% block breadcrumb %}<li>Articles in {{publication.title}}</li>{% endblock %}
 
 {% block content %}
     <div class='row'>
