@@ -9,3 +9,4 @@ TroveID: 194118441
 Precis: Letter from a resident in support of a racecourse at Katoomba instead of Leura.
 
 #racecourse
+#burlington-palace-hotel
