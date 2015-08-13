@@ -25,6 +25,7 @@ Leura, Blue Mountains, Australia.{% endblock %}
                 up-to-date.</p>
         </div>
     </div>
+
     <div class='row'>
         <div class='col-xs-12'>
            <h2>Recently Added Articles <small><a href='/recents.html'>see more</a></small></h2>
@@ -33,6 +34,7 @@ Leura, Blue Mountains, Australia.{% endblock %}
            {% endfor %}
         </div>
     </div>
+
     <div class='row'>
         <div class='col-xs-12'>
            <h2>Browse Articles by Topic</h2>
@@ -72,4 +74,14 @@ Leura, Blue Mountains, Australia.{% endblock %}
             {% endfor %}
         </div>
     </div>
+
+    <div class='row'>
+        <div class='col-xs-12'>
+           <h2>List All Articles by Publication</h2>
+           {% for publication in publications %}
+           <p><a href='{{publication.url}}'>{{publication.title}}</a> ({{publication.articles.count()}})</p>
+           {% endfor %}
+        </div>
+    </div>
+
 {% endblock %}

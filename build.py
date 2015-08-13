@@ -223,7 +223,8 @@ def build():
             event_tags=select(t for t in Tag if t.category == 'Event').order_by(Tag.title),
             business_tags=select(t for t in Tag if t.category == 'Business').order_by(Tag.title),
             group_tags=select(t for t in Tag if t.category == 'Group').order_by(Tag.title),
-            recent_articles=select(a for a in Article).order_by(desc(Article.date_updated))[:5]
+            recent_articles=select(a for a in Article).order_by(desc(Article.date_updated))[:5],
+            publications=select(p for p in Publication).order_by(Publication.title),
         )
         with open('www/index.html', 'w') as fp:
             fp.write(html)
