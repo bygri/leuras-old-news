@@ -222,6 +222,7 @@ def build():
             place_tags=select(t for t in Tag if t.category == 'Place').order_by(Tag.title),
             event_tags=select(t for t in Tag if t.category == 'Event').order_by(Tag.title),
             business_tags=select(t for t in Tag if t.category == 'Business').order_by(Tag.title),
+            group_tags=select(t for t in Tag if t.category == 'Group').order_by(Tag.title),
             recent_articles=select(a for a in Article).order_by(desc(Article.date_updated))[:5]
         )
         with open('www/index.html', 'w') as fp:

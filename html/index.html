@@ -39,37 +39,37 @@ Leura, Blue Mountains, Australia.{% endblock %}
         </div>
     </div>
     <div class='row'>
-        <div class='col-sm-6'>
+        <div class='col-sm-4'>
             <h3><span class='fa fa-user'></span> By Person</h3>
-            <ul class="list-unstyled">
-                {% for tag in person_tags %}
-                <li><a href='{{tag.url}}'>{{tag.title}}</a> <small>{{tag.precis}}</small></li>
-                {% endfor %}
-            </ul>
+            {% for tag in person_tags %}
+            <p><a href='{{tag.url}}'>{{tag.title}}</a> ({{tag.articles.count()}}) {% if tag.precis %}<br><small>{{tag.precis}}</small>{% endif %}</p>
+            {% endfor %}
         </div>
-        <div class='col-sm-6'>
+        <div class='col-sm-4'>
             <h3><span class='fa fa-map-marker'></span> By Place</h3>
-            <ul class="list-unstyled">
-                {% for tag in place_tags %}
-                <li><a href='{{tag.url}}'>{{tag.title}}</a> <small>{{tag.precis}}</small></li>
-                {% endfor %}
-            </ul>
+            {% for tag in place_tags %}
+            <p><a href='{{tag.url}}'>{{tag.title}}</a> ({{tag.articles.count()}}) {% if tag.precis %}<br><small>{{tag.precis}}</small>{% endif %}</p>
+            {% endfor %}
         </div>
-        <div class='col-sm-6'>
+        <div class='col-sm-4'>
             <h3><span class='fa fa-calendar'></span> By Event</h3>
-            <ul class="list-unstyled">
-                {% for tag in event_tags %}
-                <li><a href='{{tag.url}}'>{{tag.title}}</a> <small>{{tag.precis}}</small></li>
-                {% endfor %}
-            </ul>
+            {% for tag in event_tags %}
+            <p><a href='{{tag.url}}'>{{tag.title}}</a> ({{tag.articles.count()}}) {% if tag.precis %}<br><small>{{tag.precis}}</small>{% endif %}</p>
+            {% endfor %}
         </div>
-        <div class='col-sm-6'>
+    </div>
+    <div class='row'>
+        <div class='col-sm-4'>
             <h3><span class='fa fa-briefcase'></span> By Business</h3>
-            <ul class="list-unstyled">
-                {% for tag in business_tags %}
-                <li><a href='{{tag.url}}'>{{tag.title}}</a> <small>{{tag.precis}}</small></li>
-                {% endfor %}
-            </ul>
+            {% for tag in business_tags %}
+            <p><a href='{{tag.url}}'>{{tag.title}}</a> ({{tag.articles.count()}}) {% if tag.precis %}<br><small>{{tag.precis}}</small>{% endif %}</p>
+            {% endfor %}
+        </div>
+        <div class='col-sm-4'>
+            <h3><span class='fa fa-users'></span> By Group</h3>
+            {% for tag in group_tags %}
+            <p><a href='{{tag.url}}'>{{tag.title}}</a> ({{tag.articles.count()}}) {% if tag.precis %}<br><small>{{tag.precis}}</small>{% endif %}</p>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
