@@ -7,8 +7,14 @@
 {% block content %}
     <div class='row'>
         <div class='col-xs-12'>
+            <p>Below is a chronological list of articles tagged {{tag.title}}.</p>
+            {% set date=None %}
             {% for article in articles %}
-            <p><a href='{{article.url}}'>{{article.title}}</a>. {{article.category}}. {{article.pub_date}}, <i>{{article.publication.title}}</i>, page {{article.page}}. {% if article.precis %}<br><i>{{article.precis}}</i>{% endif %}</p>
+                {% if article.pub_date != date %}
+                <h2>{{article.pub_date|dateformat}}</h2>
+                {% endif %}
+                {% include "include/article.html" %}
+                {% set date=article.pub_date %}
             {% endfor %}
         </div>
     </div>

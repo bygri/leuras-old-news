@@ -9,14 +9,14 @@
     <div class='row'>
         <div class='col-xs-12'>
             <!-- <p style='font-family: "Droid Serif"'>Saturday 25 May 1889, <i>Katoomba Times</i>, page 4.</p> -->
-            <p>{{article.pub_date}}, <i>{{article.publication.title}}</i>, p{{article.page}}.</p>
+            <p>{{article.pub_date|dateformat}}, <i>{{article.publication.title}}</i>, p{{article.page}}.</p>
         </div>
     </div>
     <div class='row'>
         <div class='col-sm-8'>
             {% if article.has_image %}
-            <a href='/img/{{article.key}}.jpg' class='thumbnail'>
-                <img src='/img/{{article.key}}.jpg'>
+            <a href='/article-img/{{article.key}}.jpg' class='thumbnail'>
+                <img src='/article-img/{{article.key}}.jpg'>
             </a>
             {% endif %}
             {% if article.body %}

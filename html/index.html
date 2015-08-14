@@ -7,81 +7,93 @@ Leura, Blue Mountains, Australia.{% endblock %}
 {% block content %}
     <div class='row'>
         <div class='col-xs-12'>
-            <p>The National Library of Australia, with the assistance of the Blue
+            <div class='thumbnail'>
+                <img src='/img/mall-postcard.jpg'>
+                <div class='caption' style='text-align: right'>
+                    <small>The Mall, Leura. Copyright unknown.</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-sm-6 col-md-7'>
+            <p class='lead'>The National Library of Australia, with the assistance of the Blue
                 Mountains City Library, the State Library of NSW and Springwood
                 Historians, has recently released digitised versions of
                 newspapers from as early as 1889 using the NLA's
                 <a href='http://trove.nla.gov.au'>Trove</a> service.</p>
             <p>As a Leura resident, I am interested in the early history of the
-                township and decided to read my way through every reference to
-                Leura I could find. I figured I might as well transcribe and
-                annotate as many of these articles along the way as I can so
-                other people might have an easier time of it in future. I hope
-                you find this page useful.</p>
-            <p>I have a
+                township but frustated by the lack of information available.
+                Leura's larger and more interesting siblings receive all the
+                attention and our little residential oasis is ignored. We can't
+                even agree on the origin of the name.</p>
+            <p>So, now that all these old newspapers are available online, I'm
+                reading my way through every issue, recording and annotating
+                each reference to Leura, no matter how small, in the hopes of
+                building up a picture of the first few decades of our
+                village.</p>
+            <p>This web site hosts all the articles I have come across in my
+                readings so far. I also have a
                 <a href='https://www.facebook.com/LeurasOldNews'>
-                Facebook Page</a> for this site where I will occasionally post
-                interesting tidbits I come across. Follow me there to keep
-                up-to-date.</p>
+                Facebook Page</a> for the site where I post some of the more
+                interesting items as I come across them. You can contact me
+                there, or follow the page for updates.</p>
+        </div>
+
+        <div class='col-sm-6 col-md-5'>
+            <div class='panel panel-default'>
+                <div class='panel-heading'>
+                    <h3 class='panel-title'>Latest updates</h3>
+                </div>
+                <div class='panel-body'>
+                    {% for article in recent_articles %}
+                        {% include "include/article.html" %}
+                    {% endfor %}
+                    <p><a href='/recents.html'>See more articles here.</a></p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class='row'>
-        <div class='col-xs-12'>
-           <h2>Recently Added Articles <small><a href='/recents.html'>see more</a></small></h2>
-           {% for article in recent_articles %}
-           <p>[{{article.date_updated}}] <a href='{{article.url}}'>{{article.title}}</a>. {{article.category}}. {{article.pub_date}}, <i>{{article.publication.title}}</i>, page {{article.page}}. {% if article.precis %}<br><i>{{article.precis}}</i>{% endif %}</p>
-           {% endfor %}
-        </div>
-    </div>
-
-    <div class='row'>
-        <div class='col-xs-12'>
-           <h2>Browse Articles by Topic</h2>
-        </div>
-    </div>
     <div class='row'>
         <div class='col-sm-4'>
-            <h3><span class='fa fa-user'></span> By Person</h3>
+            <h2><span class='fa fa-user'></span> People</h2>
             {% for tag in person_tags %}
-            <p><a href='{{tag.url}}'>{{tag.title}}</a> ({{tag.articles.count()}}) {% if tag.precis %}<br><small>{{tag.precis}}</small>{% endif %}</p>
+                {% include "include/tag_long.html" %}
             {% endfor %}
         </div>
         <div class='col-sm-4'>
-            <h3><span class='fa fa-map-marker'></span> By Place</h3>
+            <h2><span class='fa fa-map-marker'></span> Places</h2>
             {% for tag in place_tags %}
-            <p><a href='{{tag.url}}'>{{tag.title}}</a> ({{tag.articles.count()}}) {% if tag.precis %}<br><small>{{tag.precis}}</small>{% endif %}</p>
+                {% include "include/tag_long.html" %}
             {% endfor %}
         </div>
         <div class='col-sm-4'>
-            <h3><span class='fa fa-calendar'></span> By Event</h3>
+            <h2><span class='fa fa-calendar'></span> Events</h2>
             {% for tag in event_tags %}
-            <p><a href='{{tag.url}}'>{{tag.title}}</a> ({{tag.articles.count()}}) {% if tag.precis %}<br><small>{{tag.precis}}</small>{% endif %}</p>
+                {% include "include/tag_long.html" %}
             {% endfor %}
         </div>
     </div>
     <div class='row'>
         <div class='col-sm-4'>
-            <h3><span class='fa fa-briefcase'></span> By Business</h3>
+            <h2><span class='fa fa-briefcase'></span> Businesses</h2>
             {% for tag in business_tags %}
-            <p><a href='{{tag.url}}'>{{tag.title}}</a> ({{tag.articles.count()}}) {% if tag.precis %}<br><small>{{tag.precis}}</small>{% endif %}</p>
+                {% include "include/tag_long.html" %}
             {% endfor %}
         </div>
         <div class='col-sm-4'>
-            <h3><span class='fa fa-users'></span> By Group</h3>
+            <h2><span class='fa fa-users'></span> Groups</h2>
             {% for tag in group_tags %}
-            <p><a href='{{tag.url}}'>{{tag.title}}</a> ({{tag.articles.count()}}) {% if tag.precis %}<br><small>{{tag.precis}}</small>{% endif %}</p>
+                {% include "include/tag_long.html" %}
             {% endfor %}
         </div>
-    </div>
-
-    <div class='row'>
-        <div class='col-xs-12'>
-           <h2>List All Articles by Publication</h2>
+        <div class='col-sm-4'>
+           <h2><span class='fa fa-newspaper-o'></span> Publications</h2>
            {% for publication in publications %}
            <p><a href='{{publication.url}}'>{{publication.title}}</a> ({{publication.articles.count()}})</p>
            {% endfor %}
         </div>
     </div>
-
 {% endblock %}

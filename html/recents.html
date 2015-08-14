@@ -6,8 +6,13 @@
 {% block content %}
     <div class='row'>
         <div class='col-xs-12'>
+            {% set date=None %}
             {% for article in articles %}
-            <p>[{{article.date_updated}}] <a href='{{article.url}}'>{{article.title}}</a>. {{article.category}}. {{article.pub_date}}, <i>{{article.publication.title}}</i>, page {{article.page}}. {% if article.precis %}<br><i>{{article.precis}}</i>{% endif %}</p>
+                {% if article.date_updated != date %}
+                <h2>{{article.date_updated|dateformat}}</h2>
+                {% endif %}
+                {% include "include/article.html" %}
+                {% set date=article.date_updated %}
             {% endfor %}
         </div>
     </div>

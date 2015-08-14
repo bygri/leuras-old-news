@@ -180,10 +180,13 @@ def build():
         pass
     ## Copy over any static files
     shutil.copytree('static', 'www')
-    shutil.copytree('article-img', 'www/img')
+    shutil.copytree('article-img', 'www/article-img')
     ## Now generate some html
     ## TODO: I also need a sitemap.xml
     jenv = jinja2.Environment(loader=jinja2.FileSystemLoader('html'))
+    def filter_dateformat(value, format='%A %e %B %Y'):
+        return value.strftime(format)
+    jenv.filters['dateformat'] = filter_dateformat
     with db_session:
         ## First generate the article pages
         for article in select(a for a in Article):
@@ -198,7 +201,7 @@ def build():
             template = jenv.get_template('tag.html')
             html = template.render(
                 tag=tag,
-                articles=tag.articles.order_by(Article.pub_date)
+                articles=tag.articles.order_by(Article.pub_date, Article.publication, Article.page)
             )
             path = 'www' + tag.url
             os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -209,7 +212,7 @@ def build():
             template = jenv.get_template('publication.html')
             html = template.render(
                 publication=publication,
-                articles=publication.articles.order_by(Article.pub_date)
+                articles=publication.articles.order_by(Article.pub_date, Article.page)
             )
             path = 'www' + publication.url + 'index.html'
             os.makedirs(os.path.dirname(path), exist_ok=True)
