@@ -1,5 +1,4 @@
 Title: Sale of Leura Estate
 Key: estate-sale
 Category: Event
-----
-Relating to the original subdivision and sale of the Leura Estate.
+Precis: The original subdivision and sale of the Leura Estate.
