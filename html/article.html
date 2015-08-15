@@ -9,7 +9,10 @@
     <div class='row'>
         <div class='col-xs-12'>
             {% for insertion in article.insertions %}
-            <p>{{insertion.date|dateformat}}, <i>{{insertion.publication.title}}</i>, p{{insertion.page}}.</p>
+            <p>
+                {{insertion.date|dateformat}}, <i>{{insertion.publication.title}}</i>, p{{insertion.page}}.
+                {% if insertion != insertion.article.first_insertion %}[Reprint].{% endif %}
+            </p>
             {% endfor %}
         </div>
     </div>
