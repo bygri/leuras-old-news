@@ -1,0 +1,5 @@
+<p>
+    <a href='{{insertion.article.url}}'>{{insertion.article.title}}</a>.
+    {{insertion.article.category}}. {{insertion.date|dateformat}}, <i>{{insertion.publication.title}}</i>, p{{insertion.page}}.
+    {% if insertion.article.precis %}<br><i>{{insertion.article.precis}}</i>{% endif %}
+</p>

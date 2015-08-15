@@ -1,11 +1,9 @@
 Title: The Leura Estate
 Key: 194110747b
 Category: Advertising
-Publication: KatoombaTimes
-Page: 3
-PubDate: 1889-07-27
+Insertion: 1889-07-27 | KatoombaTimes | 3 | 194110747
+Insertion: 1889-08-03 | KatoombaTimes | 4 | 194110757
 DateUpdated: 2015-08-15
-TroveID: 194110747
 Precis: Advertising the Leura Estate, pointing out the new Racecourse (as unanimously voted)
 
 #estate-sale

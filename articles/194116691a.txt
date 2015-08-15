@@ -1,11 +1,8 @@
 Title: Local Jottings
 Key: 194116691a
 Category: Jottings
-Publication: KatoombaTimes
-Page: 2
-PubDate: 1889-06-15
+Insertion: 1889-06-15 | KatoombaTimes | 2 | 194116691
 DateUpdated: 2015-08-12
-TroveID: 194116691
 Precis: Notice of meeting to inaugurate the Jockey Club.
 
 #racecourse

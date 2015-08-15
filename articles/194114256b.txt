@@ -1,11 +1,8 @@
 Title: Leura, the New Model Township
 Key: 194114256b
 Category: Advertising
-Publication: KatoombaTimes
-Page: 4
-PubDate: 1889-05-25
+Insertion: 1889-05-25 | KatoombaTimes | 4 | 194114256
 DateUpdated: 2015-08-10
-TroveID: 194114256
 Precis: Early ad listing the benefits of purchasing at the Leura Estate.
 
 #estate-sale

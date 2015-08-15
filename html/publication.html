@@ -9,12 +9,12 @@
         <div class='col-xs-12'>
             <p>Below is a chronological list of articles in the publication {{publication.title}}.</p>
             {% set date=None %}
-            {% for article in articles %}
-                {% if article.pub_date != date %}
-                <h2>{{article.pub_date|dateformat}}</h2>
+            {% for insertion in insertions %}
+                {% if insertion.date != date %}
+                <h2>{{insertion.date|dateformat}}</h2>
                 {% endif %}
-                {% include "include/article.html" %}
-                {% set date=article.pub_date %}
+                {% include "include/insertion.html" %}
+                {% set date=insertion.date %}
             {% endfor %}
         </div>
     </div>

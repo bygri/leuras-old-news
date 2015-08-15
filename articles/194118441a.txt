@@ -1,11 +1,8 @@
 Title: To the Editor
 Key: 194118441a
 Category: Letter
-Publication: KatoombaTimes
-Page: 2
-PubDate: 1889-06-29
+Insertion: 1889-06-29 | KatoombaTimes | 2 | 194118441
 DateUpdated: 2015-08-13
-TroveID: 194118441
 Precis: Letter from a resident in support of a racecourse at Katoomba instead of Leura.
 
 #racecourse

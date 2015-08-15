@@ -1,11 +1,8 @@
 Title: New Plans for the Proposed Burlington Palace Hotel
 Key: 194114256a
 Category: Advertising
-Publication: KatoombaTimes
-Page: 4
-PubDate: 1889-05-25
+Insertion: 1889-05-25 | KatoombaTimes | 4 | 194114256
 DateUpdated: 2015-08-10
-TroveID: 194114256
 Precis: Detailed description of the intended layout of the hotel.
 
 #burlington-palace-hotel

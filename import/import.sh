@@ -9,7 +9,7 @@ Key: ${1}${2}
 Category:
 Publication: KatoombaTimes
 Page:
-PubDate: 1889-
+Insertion: 1889-
 DateUpdated: ${DATE}
 TroveID: ${1}
 Precis:

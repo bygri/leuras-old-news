@@ -1,11 +1,8 @@
 Title: £10 Reward Will Be Given To Any Person
 Key: 194114254c
 Category: Advertising
-Publication: KatoombaTimes
-Page: 3
-PubDate: 1889-05-25
+Insertion: 1889-05-25 | KatoombaTimes | 3 | 194114254
 DateUpdated: 2015-08-12
-TroveID: 194114254
 Precis: A reward is offered to catch those stealing from the Gladstone Estate building site.
 
 #gladstone-estate

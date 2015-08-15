@@ -8,8 +8,9 @@
 {% block content %}
     <div class='row'>
         <div class='col-xs-12'>
-            <!-- <p style='font-family: "Droid Serif"'>Saturday 25 May 1889, <i>Katoomba Times</i>, page 4.</p> -->
-            <p>{{article.pub_date|dateformat}}, <i>{{article.publication.title}}</i>, p{{article.page}}.</p>
+            {% for insertion in article.insertions %}
+            <p>{{insertion.date|dateformat}}, <i>{{insertion.publication.title}}</i>, p{{insertion.page}}.</p>
+            {% endfor %}
         </div>
     </div>
     <div class='row'>
@@ -45,10 +46,12 @@
                     <a href='{{tag.url}}'>{{tag.title}}</a>
                 </p>
                 {% endfor %}
-                <p><b>Trove ID</b></p>
-                <p><a href='http://nla.gov.au/nla.news-article{{article.trove_id}}'>{{article.trove_id}}</a></p>
+                <p><b>View on Trove</b></p>
+                {% for insertion in article.insertions %}
+                <p><a href='http://nla.gov.au/nla.news-article{{insertion.trove_id}}'>{{insertion.date|dateformat}}</a></p>
+                {% endfor %}
                 <p><b>More in this publication</b></p>
-                <p><a href='{{article.publication.url}}'>{{article.publication.title}}</a></p>
+                <p><a href='{{article.first_insertion.publication.url}}'>{{article.first_insertion.publication.title}}</a></p>
               </div>
             </div>
         </div>

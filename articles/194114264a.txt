@@ -1,11 +1,8 @@
 Title: Another Purchaser For Leura Estate
 Key: 194114264a
 Category: Jottings
-Publication: KatoombaTimes
-Page: 2
-PubDate: 1889-05-25
+Insertion: 1889-05-25 | KatoombaTimes | 2 | 194114264
 DateUpdated: 2015-08-12
-TroveID: 194114264
 Precis:
 
 #estate-sale

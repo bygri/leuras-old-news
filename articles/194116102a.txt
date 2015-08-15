@@ -1,9 +1,6 @@
 Title: Bob is a bird-charmer
 Key: 194116102a
 Category: Jottings
-Publication: KatoombaTimes
-Page: 4
-PubDate: 1889-07-13
+Insertion: 1889-07-13 | KatoombaTimes | 4 | 194116102
 DateUpdated: 2015-08-15
-TroveID: 194116102
 Precis: Bob shot a lyre bird in Leura.

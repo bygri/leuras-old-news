@@ -1,11 +1,8 @@
 Title: Views on the Blue Mountains
 Key: 194118422a
 Category: Article
-Publication: KatoombaTimes
-Page: 2
-PubDate: 1889-06-29
+Insertion: 1889-06-29 | KatoombaTimes | 2 | 194118422
 DateUpdated: 2015-08-13
-TroveID: 194118422
 Precis: [Excerpt] Directions to reach various Mountains sights.
 
 #leura-falls

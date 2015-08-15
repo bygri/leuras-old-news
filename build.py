@@ -29,11 +29,9 @@ def build():
         title = Required(str)
         precis = Optional(str)
         category = Required(str)
-        publication = Required('Publication')
-        page = Required(str)
-        pub_date = Required(datetime.date)
+        first_insertion_date = Required(datetime.date)
+        insertions = Set('Insertion')
         date_updated = Required(datetime.date)
-        trove_id = Required(int)
         body = Optional(str)
         comment = Optional(str)
         tags = Set('Tag')
@@ -52,10 +50,13 @@ def build():
         def url(self):
             '''URL for the article detail page.'''
             return '/{}/{}/{}.html'.format(
-                self.publication.key,
-                self.pub_date.strftime('%Y-%m-%d'),
+                self.first_insertion.publication.key,
+                self.first_insertion.date.strftime('%Y-%m-%d'),
                 self.key,
             )
+        @property
+        def first_insertion(self):
+            return self.insertions.order_by(Insertion.date).first()
 
     class Tag(db.Entity):
         key = PrimaryKey(str)
@@ -78,7 +79,7 @@ def build():
         key = PrimaryKey(str)
         title = Required(str)
         comment = Optional(str)
-        articles = Set('Article')
+        insertions = Set('Insertion')
         @property
         def comment_html(self):
             '''self.comment as markdown-to-HTML.'''
@@ -88,6 +89,13 @@ def build():
         def url(self):
             '''URL for the publication overview page.'''
             return '/{}/'.format(self.key)
+
+    class Insertion(db.Entity):
+        article = Required('Article')
+        date = Required(datetime.date)
+        publication = Required('Publication')
+        page = Required(str)
+        trove_id = Required(int)
 
     db.generate_mapping(create_tables=True)
 
@@ -136,6 +144,7 @@ def build():
         with open(path, 'r') as fp, db_session:
             attrs = {'tags': []}
             section = 0 #0: meta, 1: body, 2: comment
+            insertions = []
             for line in fp.readlines():
                 if line[:4] == '----':
                     section += 1
@@ -149,15 +158,13 @@ def build():
                     elif key == 'Title': attrs['title'] = value
                     elif key == 'Key': attrs['key'] = value
                     elif key == 'Category': attrs['category'] = value
-                    elif key == 'Publication':
-                        publication = get(p for p in Publication if p.key == value)
-                        if not publication:
-                            raise Exception('Missing description file for publication "{}"'.format(value))
-                        attrs['publication'] = publication
-                    elif key == 'Page': attrs['page'] = value
-                    elif key == 'PubDate': attrs['pub_date'] = datetime.datetime.strptime(value, '%Y-%m-%d').date()
+                    elif key == 'Insertion':
+                        comps = list(map(str.strip, value.split('|')))
+                        if len(comps) != 4:
+                            raise Exception('Bad Insertion item for article {}'.format(path))
+                        assert(len(comps) == 4)
+                        insertions.append(comps)
                     elif key == 'DateUpdated': attrs['date_updated'] = datetime.datetime.strptime(value, '%Y-%m-%d').date()
-                    elif key == 'TroveID': attrs['trove_id'] = value
                     elif key == 'Precis': attrs['precis'] = value
                     elif key == None: continue
                     else:
@@ -171,7 +178,15 @@ def build():
                         attrs['comment'] = ''
                     attrs['comment'] += line
             attrs['has_image'] = os.path.exists('article-img/{}.jpg'.format(attrs['key']))
-            Article(**attrs)
+            attrs['first_insertion_date'] = datetime.datetime.strptime(insertions[0][0], '%Y-%m-%d').date()
+            article = Article(**attrs)
+            for (date, publication, page, trove_id) in insertions:
+                date = datetime.datetime.strptime(date, '%Y-%m-%d').date()
+                publication = get(p for p in Publication if p.key == publication)
+                if not publication:
+                    raise Exception('Missing description file for publication "{}"'.format(value))
+                insertion = Insertion(article=article, date=date, publication=publication, page=page, trove_id=trove_id)
+                article.insertions.add(insertion)
     # Second phase - use the items in the database to generate HTML files
     ## Create/clear the www folder
     try:
@@ -201,7 +216,7 @@ def build():
             template = jenv.get_template('tag.html')
             html = template.render(
                 tag=tag,
-                articles=tag.articles.order_by(Article.pub_date, Article.publication, Article.page)
+                articles=tag.articles.order_by(Article.first_insertion_date)
             )
             path = 'www' + tag.url
             os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -212,7 +227,7 @@ def build():
             template = jenv.get_template('publication.html')
             html = template.render(
                 publication=publication,
-                articles=publication.articles.order_by(Article.pub_date, Article.page)
+                insertions=publication.insertions.order_by(Insertion.date)
             )
             path = 'www' + publication.url + 'index.html'
             os.makedirs(os.path.dirname(path), exist_ok=True)

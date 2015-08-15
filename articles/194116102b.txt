@@ -1,9 +1,6 @@
 Title: Robert Marshall had a terrible encounter
 Key: 194116102b
 Category: Jottings
-Publication: KatoombaTimes
-Page: 4
-PubDate: 1889-07-13
+Insertion: 1889-07-13 | KatoombaTimes | 4 | 194116102
 DateUpdated: 2015-08-15
-TroveID: 194116102
 Precis: A local man fought a kangaroo in Leura (and his pants were ripped open).

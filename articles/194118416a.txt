@@ -1,11 +1,8 @@
 Title: Editorial
 Key: 194118416a
 Category: Article
-Publication: KatoombaTimes
-Page: 2
-PubDate: 1889-06-29
+Insertion: 1889-06-29 | KatoombaTimes | 2 | 194118416
 DateUpdated: 2015-08-13
-TroveID: 194118416
 Precis: The Editor cautions against haste in the Racecourse, and points out some potential problems with the scheme.
 
 #racecourse

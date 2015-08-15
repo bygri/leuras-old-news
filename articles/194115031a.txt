@@ -1,11 +1,8 @@
 Title: Telegrams
 Key: 194115031a
 Category: Article
-Publication: KatoombaTimes
-Page: 2
-PubDate: 1889-06-22
+Insertion: 1889-06-22 | KatoombaTimes | 2 | 194115031
 DateUpdated: 2015-08-13
-TroveID: 194115031
 Precis: 'Advertorial' about growing interest in the shale deposit and the proposed racecourse.
 
 #racecourse

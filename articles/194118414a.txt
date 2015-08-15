@@ -1,11 +1,8 @@
 Title: The Katoomba Racing Club
 Key: 194118414a
 Category: Advertising
-Publication: KatoombaTimes
-Page: 3
-PubDate: 1889-06-29
+Insertion: 1889-06-29 | KatoombaTimes | 3 | 194118414
 DateUpdated: 2015-08-13
-TroveID: 194118414
 Precis: Eyre reports the Club approved Leura Racecourse and advertises land for sale, at length.
 
 #eyre-william

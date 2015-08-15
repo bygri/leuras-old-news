@@ -1,11 +1,8 @@
 Title: Leura estate is held in much favor by investors
 Key: 194110757a
 Category: Jottings
-Publication: KatoombaTimes
-Page: 2
-PubDate: 1889-07-27
+Insertion: 1889-07-27 | KatoombaTimes | 2 | 194110757
 DateUpdated: 2015-08-15
-TroveID: 194110757
 Precis: The erection of the Burlington Palace Hotel, and the Jockey Club's meet in Leura, are to happen soon.
 
 #burlington-palace-hotel

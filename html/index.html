@@ -92,7 +92,7 @@ Leura, Blue Mountains, Australia.{% endblock %}
         <div class='col-sm-4'>
            <h2><span class='fa fa-newspaper-o'></span> Publications</h2>
            {% for publication in publications %}
-           <p><a href='{{publication.url}}'>{{publication.title}}</a> ({{publication.articles.count()}})</p>
+           <p><a href='{{publication.url}}'>{{publication.title}}</a> ({{publication.insertions.count()}})</p>
            {% endfor %}
         </div>
     </div>

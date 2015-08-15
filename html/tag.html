@@ -10,11 +10,11 @@
             <p>Below is a chronological list of articles tagged {{tag.title}}.</p>
             {% set date=None %}
             {% for article in articles %}
-                {% if article.pub_date != date %}
-                <h2>{{article.pub_date|dateformat}}</h2>
+                {% if article.first_insertion_date != date %}
+                <h2>{{article.first_insertion_date|dateformat}}</h2>
                 {% endif %}
                 {% include "include/article.html" %}
-                {% set date=article.pub_date %}
+                {% set date=article.first_insertion_date %}
             {% endfor %}
         </div>
     </div>

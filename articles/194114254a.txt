@@ -1,11 +1,8 @@
 Title: Tenders Required for Clearing Leura Estate
 Key: 194114254a
 Category: Advertising
-Publication: KatoombaTimes
-Page: 3
-PubDate: 1889-05-25
+Insertion: 1889-05-25 | KatoombaTimes | 3 | 194114254
 DateUpdated: 2015-08-12
-TroveID: 194114254
 Precis: Eyre is requesting someone to clear out ten acres of land for the Burlington Palace Hotel.
 
 #burlington-palace-hotel

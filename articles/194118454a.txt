@@ -1,11 +1,8 @@
 Title: Local Jottings
 Key: 194118454a
 Category: Jottings
-Publication: KatoombaTimes
-Page: 3
-PubDate: 1889-06-29
+Insertion: 1889-06-29| KatoombaTimes | 3 | 194118454
 DateUpdated: 2015-08-13
-TroveID: 194118454
 Precis: Mention of a Leura Salvation Army Brigade.
 
 #salvation-army-brigade

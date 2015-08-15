@@ -1,11 +1,8 @@
 Title: The Wealthy Squatters From the Far West
 Key: 194110747a
 Category: Advertising
-Publication: KatoombaTimes
-Page: 3
-PubDate: 1889-07-27
+Insertion: 1889-07-27 | KatoombaTimes | 3 | 194110747
 DateUpdated: 2015-08-15
-TroveID: 194110747
 Precis: Advertises the Racecourse, the Burlington Palace Hotel, and land sales at Leura Estate.
 
 #estate-sale

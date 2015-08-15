@@ -1,11 +1,8 @@
 Title: A Public Meeting is Hereby Convened
 Key: 194116689a
 Category: Advertising
-Publication: KatoombaTimes
-Page: 3
-PubDate: 1889-06-15
+Insertion: 1889-06-15 | KatoombaTimes | 3 | 194116689
 DateUpdated: 2015-08-12
-TroveID: 194116689
 Precis: Notice of a meeting to form the Racecourse Club.
 
 #racecourse

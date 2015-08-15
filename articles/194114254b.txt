@@ -1,11 +1,9 @@
 Title: Land is the Source of All Wealth
 Key: 194114254b
 Category: Advertising
-Publication: KatoombaTimes
-Page: 3
-PubDate: 1889-05-25
+Insertion: 1889-05-25 | KatoombaTimes | 3 | 194114254
+Insertion: 1889-06-08 | KatoombaTimes | 3 | 194118821
 DateUpdated: 2015-08-12
-TroveID: 194114254
 Precis: Uses a recent high-value sale in Katoomba to promote Leura property.
 
 #estate-sale
