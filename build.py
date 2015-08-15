@@ -238,6 +238,13 @@ def build():
         )
         with open('www/recents.html', 'w') as fp:
             fp.write(html)
+        ## To transcribe
+        template = jenv.get_template('to_transcribe.html')
+        html = template.render(
+            articles=select(a for a in Article if a.body == '')
+        )
+        with open('www/to_transcribe.html', 'w') as fp:
+            fp.write(html)
         ## 404 error page
         template = jenv.get_template('404error.html')
         html = template.render()

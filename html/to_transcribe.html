@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Articles for transcription | Leura's Old News{% endblock %}
+{% block meta_description %}{% endblock %}
+{% block breadcrumb %}<li>Articles for transcription</li>{% endblock %}
+
+{% block content %}
+    <div class='row'>
+        <div class='col-xs-12'>
+            <p>The following {{articles.count()}} articles need transcription.</p>
+            {% for article in articles %}
+                {% include "include/article.html" %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
