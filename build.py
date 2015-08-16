@@ -153,7 +153,7 @@ def build():
                     if key == '#':
                         tag = get(t for t in Tag if t.key == value)
                         if not tag:
-                            raise Exception('Missing description file for tag "#{}"'.format(value))
+                            raise Exception('Missing description file for tag "#{}" in article {}'.format(value, path))
                         attrs['tags'].append(tag)
                     elif key == 'Title': attrs['title'] = value
                     elif key == 'Key': attrs['key'] = value
@@ -168,7 +168,7 @@ def build():
                     elif key == 'Precis': attrs['precis'] = value
                     elif key == None: continue
                     else:
-                        raise Exception('Bad meta item {} in meta section'.format(line.rstrip()))
+                        raise Exception('Bad meta item {} in meta section for article {}'.format(line.rstrip(), path))
                 elif section == 1: # body
                     if not 'body' in attrs:
                         attrs['body'] = ''
