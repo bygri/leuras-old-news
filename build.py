@@ -243,6 +243,8 @@ def build():
             group_tags=select(t for t in Tag if t.category == 'Group').order_by(Tag.title),
             recent_articles=select(a for a in Article).order_by(desc(Article.date_updated))[:5],
             publications=select(p for p in Publication).order_by(Publication.title),
+            total_articles=select(a for a in Article).count(),
+            latest_date=select(i for i in Insertion).order_by(desc(Insertion.date)).first().date,
         )
         with open('www/index.html', 'w') as fp:
             fp.write(html)

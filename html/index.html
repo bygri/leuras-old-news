@@ -39,18 +39,21 @@ Leura, Blue Mountains, Australia.{% endblock %}
                 Facebook Page</a> for the site where I post some of the more
                 interesting items as I come across them. You can contact me
                 there, or follow the page for updates.</p>
+            <p>There are <strong>{{total_articles}} total articles</strong>
+                listed. I'm up to
+                <strong>{{latest_date|dateformat}}</strong>.</p>
         </div>
 
         <div class='col-sm-6 col-md-5'>
             <div class='panel panel-default'>
                 <div class='panel-heading'>
-                    <h3 class='panel-title'>Latest updates</h3>
+                    <h3 class='panel-title'>Latest additions</h3>
                 </div>
                 <div class='panel-body'>
                     {% for article in recent_articles %}
                         {% include "include/article.html" %}
                     {% endfor %}
-                    <p><a href='/recents.html'>See more articles here.</a></p>
+                    <p><a href='/recents.html'>See more recently-added articles here.</a></p>
                 </div>
             </div>
         </div>
