@@ -7,11 +7,8 @@ cat > $1$2.txt <<EOL
 Title:
 Key: ${1}${2}
 Category:
-Publication: KatoombaTimes
-Page:
-Insertion: 1889-
+Insertion: 1889 | KatoombaTimes | p | ${1}
 DateUpdated: ${DATE}
-TroveID: ${1}
 Precis:
 
 #

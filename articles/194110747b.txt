@@ -3,6 +3,7 @@ Key: 194110747b
 Category: Advertising
 Insertion: 1889-07-27 | KatoombaTimes | 3 | 194110747
 Insertion: 1889-08-03 | KatoombaTimes | 4 | 194110757
+Insertion: 1889-08-10 | KatoombaTimes | 4 | 194113557
 DateUpdated: 2015-08-15
 Precis: Advertising the Leura Estate at length, pointing out the proposed Racecourse.
 
