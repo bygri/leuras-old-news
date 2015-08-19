@@ -206,7 +206,10 @@ def build():
         ## First generate the article pages
         for article in select(a for a in Article):
             template = jenv.get_template('article.html')
-            html = template.render(article=article)
+            html = template.render(
+                article=article,
+                insertions=article.insertions.order_by(Insertion.date)
+            )
             path = 'www' + article.url
             os.makedirs(os.path.dirname(path), exist_ok=True)
             with open(path, 'w') as fp:
