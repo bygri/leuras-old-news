@@ -15,6 +15,8 @@ Insertion: 1889-08-31 | KatoombaTimes | 3 | 194115292
 Insertion: 1889-09-07 | KatoombaTimes | 3 | 194118314
 Insertion: 1889-09-14 | KatoombaTimes | 3 | 194117299
 Insertion: 1889-09-21 | KatoombaTimes | 3 | 194115782
+Insertion: 1889-09-28 | KatoombaTimes | 3 | 194113095
+Insertion: 1889-10-05 | KatoombaTimes | 3 | 194110603
 DateUpdated: 2015-08-18
 Precis: O'Regan's poultry farm ad includes land in Leura.
 
