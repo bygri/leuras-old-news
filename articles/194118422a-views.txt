@@ -13,6 +13,9 @@ Insertion: 1889-09-14 | KatoombaTimes | 4 | 194117347
 Insertion: 1889-09-21 | KatoombaTimes | 4 | 194115817
 Insertion: 1889-09-28 | KatoombaTimes | 4 | 194113086
 Insertion: 1889-10-05 | KatoombaTimes | 4 | 194110598
+Insertion: 1889-10-12 | KatoombaTimes | 4 | 194114770
+Insertion: 1889-10-19 | KatoombaTimes | 4 | 194111723
+Insertion: 1889-10-26 | KatoombaTimes | 2 | 194117695
 DateUpdated: 2015-08-13
 Precis: [Excerpt] Directions to reach various Mountains sights.
 
