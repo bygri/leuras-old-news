@@ -5,6 +5,7 @@ Insertion: 1889-10-26 | KatoombaTimes | 3 | 194117672
 Insertion: 1889-11-02 | KatoombaTimes | 1 | 194116283
 Insertion: 1889-11-09 | KatoombaTimes | 1 | 194116962
 Insertion: 1889-11-16 | KatoombaTimes | 1 | 194117375
+Insertion: 1889-11-23 | KatoombaTimes | 1 | 194115841
 DateUpdated: 2015-08-22
 Precis: Land sale ad: railway platform granted and paid for.
 
