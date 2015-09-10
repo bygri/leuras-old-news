@@ -1,0 +1,4 @@
+Title: Katoomba Municipality
+Key: municipality
+Category: Event
+Precis: The creation of Katoomba (including Leura) as a Municipality.
