@@ -97,6 +97,15 @@ def build():
         page = Required(str)
         trove_id = Required(int)
 
+    class YearSummary(db.Entity):
+        year = Required(int)
+        body = Required(str)
+        @property
+        def body_html(self):
+            '''self.body as markdown-to-HTML.'''
+            if not self.body: return None
+            return markdown.markdown(self.body)
+
     db.generate_mapping(create_tables=True)
 
     ## Insert publications
@@ -187,6 +196,25 @@ def build():
                     raise Exception('Missing description file for publication "{}"'.format(value))
                 insertion = Insertion(article=article, date=date, publication=publication, page=page, trove_id=trove_id)
                 article.insertions.add(insertion)
+
+    ## Yearly Summaries
+    for path in glob.glob('years/*.txt'):
+        with open(path, 'r') as fp, db_session:
+            attrs = {'body': ''}
+            section = 0 #0: meta, 1: body
+            for line in fp.readlines():
+                if line[:4] == '----':
+                    section += 1
+                elif section == 0:
+                    key, value = meta_from(line)
+                    if key == 'Year': attrs['year'] = int(value)
+                    elif key == None: continue
+                    else:
+                        raise Exception('Bad meta item {} in meta section for article {}'.format(line.rstrip(), path))
+                elif section == 1:
+                    attrs['body'] += line
+            YearSummary(**attrs)
+
     # Second phase - use the items in the database to generate HTML files
     ## Create/clear the www folder
     try:
@@ -248,9 +276,18 @@ def build():
             publications=select(p for p in Publication).order_by(Publication.title),
             total_articles=select(a for a in Article).count(),
             latest_date=select(i for i in Insertion).order_by(desc(Insertion.date)).first().date,
+            year_summaries=select(s for s in YearSummary).order_by(YearSummary.year),
         )
         with open('www/index.html', 'w') as fp:
             fp.write(html)
+        ## Yearly Summaries
+        for summary in select(s for s in YearSummary):
+            template = jenv.get_template('year.html')
+            html = template.render(summary=summary)
+            path = 'www/' + str(summary.year) + '/index.html'
+            os.makedirs(os.path.dirname(path), exist_ok=True)
+            with open(path, 'w') as fp:
+                fp.write(html)
         ## Recently Added
         template = jenv.get_template('recents.html')
         html = template.render(

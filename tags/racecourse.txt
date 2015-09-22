@@ -1,4 +1,4 @@
 Title: Leura Racecourse
 Key: racecourse
-Category: Place
+Category: Business
 Precis: A proposed sporting venue in 1889.

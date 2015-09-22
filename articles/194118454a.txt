@@ -3,9 +3,9 @@ Key: 194118454a
 Category: Jottings
 Insertion: 1889-06-29| KatoombaTimes | 3 | 194118454
 DateUpdated: 2015-08-13
-Precis: Mention of a Leura Salvation Army Brigade.
+Precis: Mention of a Leura Brigade.
 
-#salvation-army-brigade
+#leura-brigade
 ----
 The Leura Brigade held a salvation meeting on Sunday last near Katoomba Falls.
 Brother Wax's testimony will never be forgotten.

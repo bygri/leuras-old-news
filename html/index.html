@@ -42,6 +42,14 @@ Leura, Blue Mountains, Australia.{% endblock %}
             <p>There are <strong>{{total_articles}} total articles</strong>
                 listed. I'm up to
                 <strong>{{latest_date|dateformat}}</strong>.</p>
+
+            <h2>Summary by Year</h2>
+            <p>I have completed my first year's worth of reading, and summarised my findings below.</p>
+            <ul>
+                {% for summary in year_summaries %}
+                <li><a href='/{{summary.year}}/'>Leura in {{summary.year}}</a></li>
+                {% endfor %}
+            </ul>
         </div>
 
         <div class='col-sm-6 col-md-5'>
