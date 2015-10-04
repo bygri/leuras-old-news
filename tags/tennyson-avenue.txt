@@ -1,4 +1,4 @@
-Title: Tennyson Avenue
-Key: tennyson-avenue
-Category: Place
-Precis: Originally Tusculum Avenue.
+title: Tennyson Avenue
+key: tennyson-avenue
+category: Place
+precis: Originally Tusculum Avenue.

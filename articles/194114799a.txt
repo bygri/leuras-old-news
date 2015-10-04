@@ -1,9 +1,15 @@
-Title: Chit Chat By One Who Knows
-Key: 194114799a
-Category: Jottings
-Insertion: 1889-10-12 | KatoombaTimes | 2 | 194114799
-DateUpdated: 2015-08-22
-Precis: Eyre may be the first Mayor of Katoomba, but it won't be an easy job.
+title: Chit Chat By One Who Knows
+key: 194114799a
+category: Jottings
+date_updated: 2015-08-22
+precis: Eyre may be the first Mayor of Katoomba, but it won't be an easy job.
 
-#eyre-william
-#goyder
+tags:
+    - eyre-william
+    - goyder
+
+insertions:
+    - date       : 1889-10-12
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194114799

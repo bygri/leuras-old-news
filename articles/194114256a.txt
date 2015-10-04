@@ -1,13 +1,19 @@
-Title: New Plans for the Proposed Burlington Palace Hotel
-Key: 194114256a
-Category: Advertising
-Insertion: 1889-05-25 | KatoombaTimes | 4 | 194114256
-DateUpdated: 2015-08-10
-Precis: Detailed description of the intended layout of the hotel.
+title: New Plans for the Proposed Burlington Palace Hotel
+key: 194114256a
+category: Advertising
+date_updated: 2015-08-10
+precis: Detailed description of the intended layout of the hotel.
 
-#burlington-palace-hotel
-#eyre-william
-#harding-charles
+tags:
+    - burlington-palace-hotel
+    - eyre-william
+    - harding-charles
+
+insertions:
+    - date       : 1889-05-25
+      publication: KatoombaTimes
+      page       : 4
+      trove_id   : 194114256
 ----
 # New Plans for the Proposed Burlington Palace Hotel, Leura, Katomba East
 

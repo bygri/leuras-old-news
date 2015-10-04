@@ -1,8 +1,14 @@
-Title: The Leura Platform and Siding
-Key: 194116959a
-Category: Jottings
-Insertion: 1889-11-09 | KatoombaTimes | 2 | 194116959
-DateUpdated: 2015-08-23
-Precis: The new platform expected to be completed 20th December and celebrated with a grand picnic.
+title: The Leura Platform and Siding
+key: 194116959a
+category: Jottings
+date_updated: 2015-08-23
+precis: The new platform expected to be completed 20th December and celebrated with a grand picnic.
 
-#railway
+tags:
+    - railway
+
+insertions:
+    - date       : 1889-11-09
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194116959

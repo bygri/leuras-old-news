@@ -1,11 +1,17 @@
-Title: Local Jottings
-Key: 194118454a
-Category: Jottings
-Insertion: 1889-06-29| KatoombaTimes | 3 | 194118454
-DateUpdated: 2015-08-13
-Precis: Mention of a Leura Brigade.
+title: Local Jottings
+key: 194118454a
+category: Jottings
+date_updated: 2015-08-13
+precis: Mention of a Leura Brigade.
 
-#leura-brigade
+tags:
+    - leura-brigade
+
+insertions:
+    - date       : 1889-06-29
+      publication: KatoombaTimes
+      page       : 3
+      trove_id   : 194118454
 ----
 The Leura Brigade held a salvation meeting on Sunday last near Katoomba Falls.
 Brother Wax's testimony will never be forgotten.

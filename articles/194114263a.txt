@@ -1,11 +1,17 @@
-Title: Railway Schedule
-Key: 194114263a
-Category: Article
-Insertion: 1889-05-25 | KatoombaTimes | 2 | 194114263
-DateUpdated: 2015-08-12
-Precis: Sydney to Katoomba train timetable.
+title: Railway Schedule
+key: 194114263a
+category: Article
+date_updated: 2015-08-12
+precis: Sydney to Katoomba train timetable.
 
-#railway
+tags:
+    - railway
+
+insertions:
+    - date       : 1889-05-25
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194114263
 ----
 # The Railways
 

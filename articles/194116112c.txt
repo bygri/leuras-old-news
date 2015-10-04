@@ -1,12 +1,24 @@
-Title: The Katoomba Racing Club Proposed Racecourse Near Leura
-Key: 194116112c
-Category: Advertising
-Insertion: 1889-07-13 | KatoombaTimes | 3 | 194116112
-Insertion: 1889-07-20 | KatoombaTimes | 4 | 194118839
-Insertion: 1889-07-27 | KatoombaTimes | 4 | 194110765
-DateUpdated: 2015-08-15
-Precis: Advertising the estate sale based on the proposed racecourse.
+title: The Katoomba Racing Club Proposed Racecourse Near Leura
+key: 194116112c
+category: Advertising
+date_updated: 2015-08-15
+precis: Advertising the estate sale based on the proposed racecourse.
 
-#racecourse
-#eyre-william
-#estate-sale
+tags:
+    - racecourse
+    - eyre-william
+    - estate-sale
+
+insertions:
+    - date       : 1889-07-13
+      publication: KatoombaTimes
+      page       : 3
+      trove_id   : 194116112
+    - date       : 1889-07-20
+      publication: KatoombaTimes
+      page       : 4
+      trove_id   : 194118839
+    - date       : 1889-07-27
+      publication: KatoombaTimes
+      page       : 4
+      trove_id   : 194110765

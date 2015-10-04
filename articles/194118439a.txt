@@ -1,11 +1,17 @@
-Title: Katoomba Jockey Club
-Key: 194118439a
-Category: Article
-Insertion: 1889-06-29 | KatoombaTimes | 4 | 194118439
-DateUpdated: 2015-08-13
-Precis: The Club committee reports Leura the better location for the Racecourse; O'Regan disagrees. The Club is considered a 'rank failure' due to poor turnout and adjourned indefinitely.
+title: Katoomba Jockey Club
+key: 194118439a
+category: Article
+date_updated: 2015-08-13
+precis: The Club committee reports Leura the better location for the Racecourse; O'Regan disagrees. The Club is considered a 'rank failure' due to poor turnout and adjourned indefinitely.
 
-#racecourse
-#goyder
-#eyre-william
-#gladstone-estate
+tags:
+    - racecourse
+    - goyder
+    - eyre-william
+    - gladstone-estate
+
+insertions:
+    - date       : 1889-06-29
+      publication: KatoombaTimes
+      page       : 4
+      trove_id   : 194118439

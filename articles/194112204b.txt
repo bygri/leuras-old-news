@@ -1,9 +1,15 @@
-Title: Leura Platform and Siding
-Key: 194112204b
-Category: Advertising
-Insertion: 1889-11-30 | KatoombaTimes | 3 | 194112204
-DateUpdated: 2015-09-10
-Precis: Reprint of a letter to Eyre from the somewhat harassed engineer in charge of building the new platform.
+title: Leura Platform and Siding
+key: 194112204b
+category: Advertising
+date_updated: 2015-09-10
+precis: Reprint of a letter to Eyre from the somewhat harassed engineer in charge of building the new platform.
 
-#railway
-#eyre-william
+tags:
+    - railway
+    - eyre-william
+
+insertions:
+    - date       : 1889-11-30
+      publication: KatoombaTimes
+      page       : 3
+      trove_id   : 194112204

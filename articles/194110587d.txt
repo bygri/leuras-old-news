@@ -1,8 +1,14 @@
-Title: Mr. F. S. Murray has surveyed the racecourse
-Key: 194110587d
-Category: Jottings
-Insertion: 1889-10-05 | KatoombaTimes | 2 | 194110587
-DateUpdated: 2015-08-22
-Precis: The surveyor has prepared a plan for the racecourse, and the racecourse company will be formed shortly.
+title: Mr. F. S. Murray has surveyed the racecourse
+key: 194110587d
+category: Jottings
+date_updated: 2015-08-22
+precis: The surveyor has prepared a plan for the racecourse, and the racecourse company will be formed shortly.
 
-#racecourse
+tags:
+    - racecourse
+
+insertions:
+    - date       : 1889-10-05
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194110587

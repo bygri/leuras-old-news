@@ -1,13 +1,22 @@
-Title: The Gem of the Blue Mountains!
-Key: 194118314a
-Category: Advertising
-Insertion: 1889-09-07 | KatoombaTimes | 3 | 194118314
-Insertion: 1889-09-14 | KatoombaTimes | 4 | 194117296
-DateUpdated: 2015-08-21
-Precis: Eyre reports an imminent rail platform, competing investment companies, the racecourse, and the clearing of Tusculum (now Tennyson) Avenues.
+title: The Gem of the Blue Mountains!
+key: 194118314a
+category: Advertising
+date_updated: 2015-08-21
+precis: Eyre reports an imminent rail platform, competing investment companies, the racecourse, and the clearing of Tusculum (now Tennyson) Avenues.
 
-#eyre-william
-#estate-sale
-#tennyson-avenue
-#racecourse
-#railway
+tags:
+    - eyre-william
+    - estate-sale
+    - tennyson-avenue
+    - racecourse
+    - railway
+
+insertions:
+    - date       : 1889-09-07
+      publication: KatoombaTimes
+      page       : 3
+      trove_id   : 194118314
+    - date       : 1889-09-14
+      publication: KatoombaTimes
+      page       : 4
+      trove_id   : 194117296

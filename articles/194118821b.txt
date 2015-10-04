@@ -1,14 +1,26 @@
-Title: Swiss Villas at Leura
-Key: 194118821b
-Category: Advertising
-Insertion: 1889-06-08 | KatoombaTimes | 4 | 194118821
-Insertion: 1889-06-15 | KatoombaTimes | 4 | 194116673
-Insertion: 1889-06-22 | KatoombaTimes | 3 | 194115032
-DateUpdated: 2015-08-13
-Precis: Advertising for the sale of the Leura Estate.
+title: Swiss Villas at Leura
+key: 194118821b
+category: Advertising
+date_updated: 2015-08-13
+precis: Advertising for the sale of the Leura Estate.
 
-#estate-sale
-#eyre-william
+tags:
+    - estate-sale
+    - eyre-william
+
+insertions:
+    - date       : 1889-06-08
+      publication: KatoombaTimes
+      page       : 4
+      trove_id   : 194118821
+    - date       : 1889-06-15
+      publication: KatoombaTimes
+      page       : 4
+      trove_id   : 194116673
+    - date       : 1889-06-22
+      publication: KatoombaTimes
+      page       : 3
+      trove_id   : 194115032
 ----
 # Swiss Villas at Leura.
 

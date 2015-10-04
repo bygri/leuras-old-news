@@ -1,9 +1,15 @@
-Title: Tenders are Invited for Making a Path in Fern Glen
-Key: 194110603a
-Category: Advertising
-Insertion: 1889-10-05 | KatoombaTimes | 3 | 194110603
-DateUpdated: 2015-08-22
-Precis: Mr. Goyder calls for tenders to make a path in the Leura Reserve.
+title: Tenders are Invited for Making a Path in Fern Glen
+key: 194110603a
+category: Advertising
+date_updated: 2015-08-22
+precis: Mr. Goyder calls for tenders to make a path in the Leura Reserve.
 
-#goyder
-#leura-reserve
+tags:
+    - goyder
+    - leura-reserve
+
+insertions:
+    - date       : 1889-10-05
+      publication: KatoombaTimes
+      page       : 3
+      trove_id   : 194110603

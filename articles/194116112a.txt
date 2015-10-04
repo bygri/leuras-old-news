@@ -1,9 +1,15 @@
-Title: Burlington Palace Hotel
-Key: 194116112a
-Category: Advertising
-Insertion: 1889-07-13 | KatoombaTimes | 3 | 194116112
-DateUpdated: 2015-08-15
-Precis: The plans for the Hotel will be put on public exhibition in Katoomba.
+title: Burlington Palace Hotel
+key: 194116112a
+category: Advertising
+date_updated: 2015-08-15
+precis: The plans for the Hotel will be put on public exhibition in Katoomba.
 
-#burlington-palace-hotel
-#eyre-william
+tags:
+    - burlington-palace-hotel
+    - eyre-william
+
+insertions:
+    - date       : 1889-07-13
+      publication: KatoombaTimes
+      page       : 3
+      trove_id   : 194116112

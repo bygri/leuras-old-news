@@ -1,4 +1,4 @@
-Title: Palmerston Estate
-Key: palmerston-estate
-Category: Place
-Precis: The estate on which the Leura Oval was situated.
+title: Palmerston Estate
+key: palmerston-estate
+category: Place
+precis: The estate on which the Leura Oval was situated.

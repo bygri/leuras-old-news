@@ -1,9 +1,15 @@
-Title: We hear that Mr. William Eyre is endeavouring to form a syndicate
-Key: 194110945a
-Category: Jottings
-Insertion: 1889-12-21 | KatoombaTimes | 2 | 194110945
-DateUpdated: 2015-09-10
-Precis: Eyre is trying to form a company for the Katoomba Racing and Athletic Club to form the Leura Racecourse.
+title: We hear that Mr. William Eyre is endeavouring to form a syndicate
+key: 194110945a
+category: Jottings
+date_updated: 2015-09-10
+precis: Eyre is trying to form a company for the Katoomba Racing and Athletic Club to form the Leura Racecourse.
 
-#racecourse
-#eyre-william
+tags:
+    - racecourse
+    - eyre-william
+
+insertions:
+    - date       : 1889-12-21
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194110945

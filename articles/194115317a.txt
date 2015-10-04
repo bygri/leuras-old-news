@@ -1,7 +1,13 @@
-Title: Leura is attracting many visitors
-Key: 194115317a
-Category: Jottings
-Insertion: 1889-08-31 | KatoombaTimes | 2 | 194115317
-DateUpdated: 2015-08-21
+title: Leura is attracting many visitors
+key: 194115317a
+category: Jottings
+date_updated: 2015-08-21
 
-#estate-sale
+tags:
+    - estate-sale
+
+insertions:
+    - date       : 1889-08-31
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194115317

@@ -1,10 +1,16 @@
-Title: The New Racecourse at Leura
-Key: 194115032b
-Category: Advertising
-Insertion: 1889-06-22 | KatoombaTimes | 3 | 194115032
-DateUpdated: 2015-08-13
-Precis: Advertising for the Leura Estate focused on the proposed racecourse.
+title: The New Racecourse at Leura
+key: 194115032b
+category: Advertising
+date_updated: 2015-08-13
+precis: Advertising for the Leura Estate focused on the proposed racecourse.
 
-#eyre-william
-#racecourse
-#estate-sale
+tags:
+    - eyre-william
+    - racecourse
+    - estate-sale
+
+insertions:
+    - date       : 1889-06-22
+      publication: KatoombaTimes
+      page       : 3
+      trove_id   : 194115032

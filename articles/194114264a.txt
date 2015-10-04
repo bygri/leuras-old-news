@@ -1,11 +1,17 @@
-Title: Another Purchaser For Leura Estate
-Key: 194114264a
-Category: Jottings
-Insertion: 1889-05-25 | KatoombaTimes | 2 | 194114264
-DateUpdated: 2015-08-12
-Precis:
+title: Another Purchaser For Leura Estate
+key: 194114264a
+category: Jottings
+date_updated: 2015-08-12
+precis: J. H. Mitchell is doing business with him.
 
-#estate-sale
+tags:
+    - estate-sale
+
+insertions:
+    - date       : 1889-05-25
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194114264
 ----
 Another purchaser up on Wednesday for the Leura Estate, and Mr. J. H. Mitchell
 is doing business with him in Katoomba town lots.

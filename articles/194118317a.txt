@@ -1,6 +1,11 @@
-Title: Wentworth Falls
-Key: 194118317a
-Category: Jottings
-Insertion: 1889-09-07 | KatoombaTimes | 2 | 194118317
-DateUpdated: 2015-08-21
-Precis: The Wentworth Falls in spring 'nearly equals… your far-famed Leura Estate'
+title: Wentworth Falls
+key: 194118317a
+category: Jottings
+date_updated: 2015-08-21
+precis: The Wentworth Falls in spring 'nearly equals… your far-famed Leura Estate'
+
+insertions:
+    - date       : 1889-09-07
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194118317

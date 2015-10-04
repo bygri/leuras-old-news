@@ -1,4 +1,4 @@
-Title: Eyre, William
-Key: eyre-william
-Category: Person
-Precis: Property developer responsible for the original sale of the Leura Estate.
+title: Eyre, William
+key: eyre-william
+category: Person
+precis: Property developer responsible for the original sale of the Leura Estate.

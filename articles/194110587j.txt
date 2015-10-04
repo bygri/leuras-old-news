@@ -1,8 +1,14 @@
-Title: Waratah and Leichhardt streets are all being made right into Leura
-Key: 194110587j
-Category: Jottings
-Insertion: 1889-10-05 | KatoombaTimes | 2 | 194110587
-DateUpdated: 2015-08-22
-Precis: Katoomba streets being extended into Leura Estate.
+title: Waratah and Leichhardt streets are all being made right into Leura
+key: 194110587j
+category: Jottings
+date_updated: 2015-08-22
+precis: Katoomba streets being extended into Leura Estate.
 
-#eyre-william
+tags:
+    - eyre-william
+
+insertions:
+    - date       : 1889-10-05
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194110587

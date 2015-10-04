@@ -1,8 +1,14 @@
-Title: Tourists inconvenienced in Leura Falls
-Key: 194110587c
-Category: Jottings
-Insertion: 1889-10-05 | KatoombaTimes | 2 | 194110587
-DateUpdated: 2015-08-22
-Precis: Tourists who did not tie up their horses had to walk home from Leura Falls.
+title: Tourists inconvenienced in Leura Falls
+key: 194110587c
+category: Jottings
+date_updated: 2015-08-22
+precis: Tourists who did not tie up their horses had to walk home from Leura Falls.
 
-#leura-falls
+tags:
+    - leura-falls
+
+insertions:
+    - date       : 1889-10-05
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194110587

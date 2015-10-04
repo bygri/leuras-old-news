@@ -1,11 +1,17 @@
-Title: Bob is a bird-charmer
-Key: 194116102a
-Category: Jottings
-Insertion: 1889-07-13 | KatoombaTimes | 4 | 194116102
-DateUpdated: 2015-08-15
-Precis: Bob shot a lyre bird in Leura.
+title: Bob is a bird-charmer
+key: 194116102a
+category: Jottings
+date_updated: 2015-08-15
+precis: Bob shot a lyre bird in Leura.
 
-#marshall-robert
+tags:
+    - marshall-robert
+
+insertions:
+    - date       : 1889-07-13
+      publication: KatoombaTimes
+      page       : 4
+      trove_id   : 194116102
 ----
 Bob is a bird-charmer—lured a lyre bird to Leura and put a little salt on the
 tail.

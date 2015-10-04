@@ -1,8 +1,14 @@
-Title: In answer to a requisition from the leading residents of Katoomba
-Key: 194110587g
-Category: Jottings
-Insertion: 1889-10-05 | KatoombaTimes | 2 | 194110587
-DateUpdated: 2015-08-22
-Precis: The Sydney and Suburban Mutual Permanent Building and Land Investment Association to establish a presence in Katoomba.
+title: In answer to a requisition from the leading residents of Katoomba
+key: 194110587g
+category: Jottings
+date_updated: 2015-08-22
+precis: The Sydney and Suburban Mutual Permanent Building and Land Investment Association to establish a presence in Katoomba.
 
-#eyre-william
+tags:
+    - eyre-william
+
+insertions:
+    - date       : 1889-10-05
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194110587

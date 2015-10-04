@@ -1,13 +1,22 @@
-Title: Land is the Source of All Wealth
-Key: 194114254b
-Category: Advertising
-Insertion: 1889-05-25 | KatoombaTimes | 3 | 194114254
-Insertion: 1889-06-08 | KatoombaTimes | 3 | 194118821
-DateUpdated: 2015-08-12
-Precis: Uses a recent high-value sale in Katoomba to promote Leura property.
+title: Land is the Source of All Wealth
+key: 194114254b
+category: Advertising
+date_updated: 2015-08-12
+precis: Uses a recent high-value sale in Katoomba to promote Leura property.
 
-#estate-sale
-#eyre-william
+tags:
+    - estate-sale
+    - eyre-william
+
+insertions:
+    - date       : 1889-05-25
+      publication: KatoombaTimes
+      page       : 3
+      trove_id   : 194114254
+    - date       : 1889-06-08
+      publication: KatoombaTimes
+      page       : 3
+      trove_id   : 194118821
 ----
 
 "Land is the source of all wealth"

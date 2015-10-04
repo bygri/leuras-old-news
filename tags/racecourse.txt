@@ -1,4 +1,4 @@
-Title: Leura Racecourse
-Key: racecourse
-Category: Business
-Precis: A proposed sporting venue in 1889.
+title: Leura Racecourse
+key: racecourse
+category: Business
+precis: A proposed sporting venue in 1889.

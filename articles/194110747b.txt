@@ -1,16 +1,28 @@
-Title: The Leura Estate
-Key: 194110747b
-Category: Advertising
-Insertion: 1889-07-27 | KatoombaTimes | 3 | 194110747
-Insertion: 1889-08-03 | KatoombaTimes | 4 | 194110757
-Insertion: 1889-08-10 | KatoombaTimes | 4 | 194113557
-DateUpdated: 2015-08-15
-Precis: Advertising the Leura Estate at length, pointing out the proposed Racecourse.
+title: The Leura Estate
+key: 194110747b
+category: Advertising
+date_updated: 2015-08-15
+precis: Advertising the Leura Estate at length, pointing out the proposed Racecourse.
 
-#estate-sale
-#eyre-william
-#racecourse
-#goyder
+tags:
+    - estate-sale
+    - eyre-william
+    - racecourse
+    - goyder
+
+insertions:
+    - date       : 1889-07-27
+      publication: KatoombaTimes
+      page       : 3
+      trove_id   : 194110747
+    - date       : 1889-08-03
+      publication: KatoombaTimes
+      page       : 4
+      trove_id   : 194110757
+    - date       : 1889-08-10
+      publication: KatoombaTimes
+      page       : 4
+      trove_id   : 194113557
 ----
 # The Leura Estate.
 

@@ -1,12 +1,18 @@
-Title: The following little incident
-Key: 194118261a
-Category: Jottings
-Insertion: 1889-12-07 | KatoombaTimes | 2 | 194118261
-DateUpdated: 2015-09-10
-Precis: An amusing encounter between Mr. Eyre and the workmen building his Leura Platform.
+title: The following little incident
+key: 194118261a
+category: Jottings
+date_updated: 2015-09-10
+precis: An amusing encounter between Mr. Eyre and the workmen building his Leura Platform.
 
-#eyre-william
-#railway
+tags:
+    - eyre-william
+    - railway
+
+insertions:
+    - date       : 1889-12-07
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194118261
 ----
 The following little incident is said to have occurred somewhere on the Blue
 Mountains, not at Leura, where a siding and platform are in course of

@@ -1,14 +1,20 @@
-Title: Leura, the New Model Township
-Key: 194114256b
-Category: Advertising
-Insertion: 1889-05-25 | KatoombaTimes | 4 | 194114256
-DateUpdated: 2015-08-10
-Precis: Early ad listing the benefits of purchasing at the Leura Estate.
+title: Leura, the New Model Township
+key: 194114256b
+category: Advertising
+date_updated: 2015-08-10
+precis: Early ad listing the benefits of purchasing at the Leura Estate.
 
-#estate-sale
-#eyre-william
-#government-road
-#gladstone-estate
+tags:
+    - estate-sale
+    - eyre-william
+    - government-road
+    - gladstone-estate
+
+insertions:
+    - date       : 1889-05-25
+      publication: KatoombaTimes
+      page       : 4
+      trove_id   : 194114256
 ----
 # Leura, the New Model Township, Katoomba East
 

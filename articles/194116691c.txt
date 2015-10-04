@@ -1,11 +1,17 @@
-Title: Local Jottings
-Key: 194116691c
-Category: Jottings
-Insertion: 1889-06-15 | KatoombaTimes | 2 | 194116691
-DateUpdated: 2015-08-12
-Precis: Races to be held on Leura Oval in June 1890.
+title: Local Jottings
+key: 194116691c
+category: Jottings
+date_updated: 2015-08-12
+precis: Races to be held on Leura Oval in June 1890.
 
-#racecourse
-#eyre-william
+tags:
+    - racecourse
+    - eyre-william
+
+insertions:
+    - date       : 1889-06-15
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194116691
 ----
 Races are to be held on Leura Oval, Mr. W. Eyre says, in June next.

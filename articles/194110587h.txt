@@ -1,8 +1,14 @@
-Title: Five miles of streets have been made at Leura
-Key: 194110587h
-Category: Jottings
-Insertion: 1889-10-05 | KatoombaTimes | 2 | 194110587
-DateUpdated: 2015-08-22
-Precis: Leura is one of the most developed estates on the Blue Mountains.
+title: Five miles of streets have been made at Leura
+key: 194110587h
+category: Jottings
+date_updated: 2015-08-22
+precis: Leura is one of the most developed estates on the Blue Mountains.
 
-#estate-sale
+tags:
+    - estate-sale
+
+insertions:
+    - date       : 1889-10-05
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194110587

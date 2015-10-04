@@ -1,9 +1,15 @@
-Title: Tenders for making a path in Fern Gully
-Key: 194110587a
-Category: Jottings
-Insertion: 1889-10-05 | KatoombaTimes | 2 | 194110587
-DateUpdated: 2015-08-22
-Precis: Calling tenders to make a path in Fern Gully, Leura Reserve.
+title: Tenders for making a path in Fern Gully
+key: 194110587a
+category: Jottings
+date_updated: 2015-08-22
+precis: Calling tenders to make a path in Fern Gully, Leura Reserve.
 
-#leura-reserve
-#goyder
+tags:
+    - leura-reserve
+    - goyder
+
+insertions:
+    - date       : 1889-10-05
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194110587

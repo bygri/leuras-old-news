@@ -1,8 +1,14 @@
-Title: Ten men are at work at the Leura Estate
-Key: 194118261c
-Category: Jottings
-Insertion: 1889-12-07 | KatoombaTimes | 2 | 194118261
-DateUpdated: 2015-09-10
-Precis: Ten men are working on the new platform and siding.
+title: Ten men are at work at the Leura Estate
+key: 194118261c
+category: Jottings
+date_updated: 2015-09-10
+precis: Ten men are working on the new platform and siding.
 
-#railway
+tags:
+    - railway
+
+insertions:
+    - date       : 1889-12-07
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194118261

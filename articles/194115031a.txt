@@ -1,13 +1,19 @@
-Title: Telegrams
-Key: 194115031a
-Category: Article
-Insertion: 1889-06-22 | KatoombaTimes | 2 | 194115031
-DateUpdated: 2015-08-13
-Precis: 'Advertorial' about growing interest in the shale deposit and the proposed racecourse.
+title: Telegrams
+key: 194115031a
+category: Article
+date_updated: 2015-08-13
+precis: \'Advertorial\' about growing interest in the shale deposit and the proposed racecourse.
 
-#racecourse
-#railway
-#eyre-william
+tags:
+    - racecourse
+    - railway
+    - eyre-william
+
+insertions:
+    - date       : 1889-06-22
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194115031
 ----
 # Telegrams
 

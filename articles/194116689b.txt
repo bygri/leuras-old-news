@@ -1,11 +1,17 @@
-Title: Give Honour to Whom Honour is Due
-Key: 194116689b
-Category: Advertising
-Insertion: 1889-06-15 | KatoombaTimes | 3 | 194116689
-DateUpdated: 2015-08-12
-Precis: Sales piece for the Leura Estate with a Racecourse bent.
+title: Give Honour to Whom Honour is Due
+key: 194116689b
+category: Advertising
+date_updated: 2015-08-12
+precis: Sales piece for the Leura Estate with a Racecourse bent.
 
-#racecourse
-#eyre-william
-#goyder
-#estate-sale
+tags:
+    - racecourse
+    - eyre-william
+    - goyder
+    - estate-sale
+
+insertions:
+    - date       : 1889-06-15
+      publication: KatoombaTimes
+      page       : 3
+      trove_id   : 194116689

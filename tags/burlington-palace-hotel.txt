@@ -1,4 +1,4 @@
-Title: Burlington Palace Hotel
-Key: burlington-palace-hotel
-Category: Business
-Precis: A grand Leura hotel planned by William Eyre.
+title: Burlington Palace Hotel
+key: burlington-palace-hotel
+category: Business
+precis: A grand Leura hotel planned by William Eyre.

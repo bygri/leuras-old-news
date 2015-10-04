@@ -1,13 +1,22 @@
-Title: The Lyre Bird
-Key: 194116112b
-Category: Advertising
-Insertion: 1889-07-13 | KatoombaTimes | 3 | 194116112
-Insertion: 1889-07-27 | KatoombaTimes | 4 | 194110765
-DateUpdated: 2015-08-15
-Precis: Eyre informs the public that a lyre bird was shot on Leura Estate and is being taxidermied.
+title: The Lyre Bird
+key: 194116112b
+category: Advertising
+date_updated: 2015-08-15
+precis: Eyre informs the public that a lyre bird was shot on Leura Estate and is being taxidermied.
 
-#eyre-william
-#estate-sale
+tags:
+    - eyre-william
+    - estate-sale
+
+insertions:
+    - date       : 1889-07-13
+      publication: KatoombaTimes
+      page       : 3
+      trove_id   : 194116112
+    - date       : 1889-07-27
+      publication: KatoombaTimes
+      page       : 4
+      trove_id   : 194110765
 ----
 # The Lyre Bird.
 

@@ -1,8 +1,14 @@
-Title: Leura platform and siding will be finished by the 24th December
-Key: 194112208b
-Category: Jottings
-Insertion: 1889-11-30 | KatoombaTimes | 2 | 194112208
-DateUpdated: 2015-09-10
-Precis: Reports the platform will be complete by 24th December.
+title: Leura platform and siding will be finished by the 24th December
+key: 194112208b
+category: Jottings
+date_updated: 2015-09-10
+precis: Reports the platform will be complete by 24th December.
 
-#railway
+tags:
+    - railway
+
+insertions:
+    - date       : 1889-11-30
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194112208

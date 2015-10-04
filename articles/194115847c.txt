@@ -1,9 +1,15 @@
-Title: Now the fine weather has set in
-Key: 194115847c
-Category: Jottings
-Insertion: 1889-11-23 | KatoombaTimes | 2 | 194115847
-DateUpdated: 2015-09-08
-Precis: Weather is good, people are looking to buy in Leura.
+title: Now the fine weather has set in
+key: 194115847c
+category: Jottings
+date_updated: 2015-09-08
+precis: Weather is good, people are looking to buy in Leura.
 
-#estate-sale
-#eyre-william
+tags:
+    - estate-sale
+    - eyre-william
+
+insertions:
+    - date       : 1889-11-23
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194115847

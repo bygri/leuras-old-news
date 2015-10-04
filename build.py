@@ -6,20 +6,26 @@ import shutil
 import jinja2
 import markdown
 from pony import orm
+import yaml
 
 db = orm.Database()
 
 # Helper functions
-def meta_from(line):
-    '''Returns key, value or None from a line like "Key: Value" or "#tag"'''
-    if line[0] == '#':
-        return '#', line[1:].lstrip().rstrip()
-    idx = line.find(':')
-    if idx == -1:
-        return None, None
-    key = line[:idx].lstrip().rstrip()
-    value = line[idx+1:].lstrip().rstrip()
-    return key, value
+def data_from(fp):
+    '''Load meta and body from the specified file.'''
+    # Read in all meta
+    meta_txt = ''
+    for line in fp:
+        if line.startswith('---'):
+            break
+        meta_txt += line
+    # Anything now should be a body
+    body_txt = ''
+    for line in fp:
+        body_txt += line
+    # Now we do stuff with it
+    meta = {k.lower():v for k, v in yaml.safe_load(meta_txt).items()}
+    return (meta, body_txt if body_txt != '' else None)
 
 def generate_template(jenv, template_name, path, **kwargs):
     template = jenv.get_template(template_name)
@@ -121,113 +127,57 @@ def build_database(db):
     for root, dirnames, filenames in os.walk('publications'):
         for filename in fnmatch.filter(filenames, '*.txt'):
             with open(os.path.join(root, filename), 'r') as fp, orm.db_session:
-                attrs = {}
-                section = 0
-                for line in fp.readlines():
-                    if line[:4] == '----':
-                        section += 1
-                    elif section == 0: # meta
-                        key, value = meta_from(line)
-                        if key == 'Title': attrs['title'] = value
-                        elif key == 'Key': attrs['key'] = value
-                        elif key == None: continue
-                    elif section == 1: # comment
-                        if not 'comment' in attrs:
-                            attrs['comment'] = ''
-                        attrs['comment'] += line
-                Publication(**attrs)
+                meta, body = data_from(fp)
+                if body:
+                    meta['comment'] = body
+                Publication(**meta)
 
     ## Insert all tags into the database
     for root, dirnames, filenames in os.walk('tags'):
         for filename in fnmatch.filter(filenames, '*.txt'):
             with open(os.path.join(root, filename), 'r') as fp, orm.db_session:
-                attrs = {}
-                section = 0
-                for line in fp.readlines():
-                    if line[:4] == '----':
-                        section += 1
-                    elif section == 0: # meta
-                        key, value = meta_from(line)
-                        if key == 'Title': attrs['title'] = value
-                        elif key == 'Key': attrs['key'] = value
-                        elif key == 'Category': attrs['category'] = value
-                        elif key == 'Precis': attrs['precis'] = value
-                        elif key == None: continue
-                    elif section == 1: # comment
-                        if not 'comment' in attrs:
-                            attrs['comment'] = ''
-                        attrs['comment'] += line
-                Tag(**attrs)
+                meta, body = data_from(fp)
+                if body:
+                    meta['comment'] = body
+                Tag(**meta)
 
     ## Insert all articles into the database
     for root, dirnames, filenames in os.walk('articles'):
         for filename in fnmatch.filter(filenames, '*.txt'):
             with open(os.path.join(root, filename), 'r') as fp, orm.db_session:
-                attrs = {'tags': []}
-                section = 0 #0: meta, 1: body, 2: comment
-                insertions = []
-                for line in fp.readlines():
-                    if line[:4] == '----':
-                        section += 1
-                    elif section == 0: # meta
-                        key, value = meta_from(line)
-                        if key == '#':
-                            tag = orm.get(t for t in Tag if t.key == value)
-                            if not tag:
-                                raise Exception('Missing description file for tag "#{}" in article {}'.format(value, filename))
-                            attrs['tags'].append(tag)
-                        elif key == 'Title': attrs['title'] = value
-                        elif key == 'Key': attrs['key'] = value
-                        elif key == 'Category': attrs['category'] = value
-                        elif key == 'Insertion':
-                            comps = list(map(str.strip, value.split('|')))
-                            if len(comps) != 4:
-                                raise Exception('Bad Insertion item for article {}'.format(filename))
-                            assert(len(comps) == 4)
-                            insertions.append(comps)
-                        elif key == 'DateUpdated': attrs['date_updated'] = datetime.datetime.strptime(value, '%Y-%m-%d').date()
-                        elif key == 'Precis': attrs['precis'] = value
-                        elif key == None: continue
-                        else:
-                            raise Exception('Bad meta item {} in meta section for article {}'.format(line.rstrip(), filename))
-                    elif section == 1: # body
-                        if not 'body' in attrs:
-                            attrs['body'] = ''
-                        attrs['body'] += line
-                    elif section == 2: # comment
-                        if not 'comment' in attrs:
-                            attrs['comment'] = ''
-                        attrs['comment'] += line
-                attrs['has_image'] = os.path.exists('article-img/{}.jpg'.format(attrs['key']))
-                attrs['first_insertion_date'] = datetime.datetime.strptime(insertions[0][0], '%Y-%m-%d').date()
-                article = Article(**attrs)
-                for (date, publication, page, trove_id) in insertions:
-                    date = datetime.datetime.strptime(date, '%Y-%m-%d').date()
-                    publication = orm.get(p for p in Publication if p.key == publication)
-                    if not publication:
-                        raise Exception('Missing description file for publication "{}"'.format(value))
-                    insertion = Insertion(article=article, date=date, publication=publication, page=page, trove_id=trove_id)
+                meta, body = data_from(fp)
+                if body:
+                    meta['body'] = body
+                # Convert tags to Tag objects
+                tags = []
+                if 'tags' in meta:
+                    for value in meta['tags']:
+                        tags.append(orm.get(t for t in Tag if t.key == value))
+                meta['tags'] = tags
+                # Check existence of an image
+                meta['has_image'] = os.path.exists('article-img/{}.jpg'.format(meta['key']))
+                # Remove insertions for now, since Article has to be created first, but save the first insertion date.
+                insertions = meta['insertions']
+                del(meta['insertions'])
+                meta['first_insertion_date'] = insertions[0]['date']
+                # Now create the Article
+                article = Article(**meta)
+                # Add Insertions
+                for insertion in insertions:
+                    insertion['page'] = str(insertion['page']) # Disallow integers
+                    insertion['publication'] = orm.get(p for p in Publication if p.key == insertion['publication'])
+                    insertion = Insertion(article=article, **insertion)
                     article.insertions.add(insertion)
 
     ## Yearly Summaries
     for root, dirnames, filenames in os.walk('years'):
         for filename in fnmatch.filter(filenames, '*.txt'):
             with open(os.path.join(root, filename), 'r') as fp, orm.db_session:
-                attrs = {'body': ''}
-                section = 0 #0: meta, 1: body
-                for line in fp.readlines():
-                    if line[:4] == '----':
-                        section += 1
-                    elif section == 0:
-                        key, value = meta_from(line)
-                        if key == 'Year': attrs['year'] = int(value)
-                        elif key == None: continue
-                        else:
-                            raise Exception('Bad meta item {} in meta section for article {}'.format(line.rstrip(), filename))
-                    elif section == 1:
-                        attrs['body'] += line
-                YearSummary(**attrs)
-
+                meta, body = data_from(fp)
+                meta = {k.lower():v for k, v in meta.items()}
+                if body:
+                    meta['body'] = body
+                YearSummary(**meta)
 
 def build_html(db):
     '''Use the items in the database to generate HTML files.'''

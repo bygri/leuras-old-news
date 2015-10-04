@@ -1,8 +1,14 @@
-Title: Should Katoomba be formed into a Municipality, Eyre to stand
-Key: 194110587f
-Category: Jottings
-Insertion: 1889-10-05 | KatoombaTimes | 2 | 194110587
-DateUpdated: 2015-08-22
-Precis: Eyre to stand as candidate for Katoomba mayorship.
+title: Should Katoomba be formed into a Municipality, Eyre to stand
+key: 194110587f
+category: Jottings
+date_updated: 2015-08-22
+precis: Eyre to stand as candidate for Katoomba mayorship.
 
-#eyre-william
+tags:
+    - eyre-william
+
+insertions:
+    - date       : 1889-10-05
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194110587

@@ -1,8 +1,14 @@
-Title: Poet's Corner: Leura Falls
-Key: 194118310a
-Category: Article
-Insertion: 1889-09-07 | KatoombaTimes | 4 | 194118310
-DateUpdated: 2015-08-21
-Precis: A poem about Leura Falls.
+title: Poet's Corner; Leura Falls
+key: 194118310a
+category: Article
+date_updated: 2015-08-21
+precis: A poem about Leura Falls.
 
-#leura-falls
+tags:
+    - leura-falls
+
+insertions:
+    - date       : 1889-09-07
+      publication: KatoombaTimes
+      page       : 4
+      trove_id   : 194118310

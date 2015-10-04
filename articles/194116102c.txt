@@ -1,10 +1,16 @@
-Title: How much did Robert pay for the lyre?
-Key: 194116102c
-Category: Jottings
-Insertion: 1889-07-13 | KatoombaTimes | 4 | 194116102
-DateUpdated: 2015-08-15
-Precis: Posits that the man who 'shot' the lyre bird bought it from someone else.
+title: How much did Robert pay for the lyre?
+key: 194116102c
+category: Jottings
+date_updated: 2015-08-15
+precis: Posits that the man who 'shot' the lyre bird bought it from someone else.
 
-#eyre-william
+tags:
+    - eyre-william
+
+insertions:
+    - date       : 1889-07-13
+      publication: KatoombaTimes
+      page       : 4
+      trove_id   : 194116102
 ----
 How much did Robert pay for the lyre that he presented to Mr. Eyre?

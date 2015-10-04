@@ -1,12 +1,21 @@
-Title: The Proposed New Racecourse Has Been Surveyed
-Key: 194113095a
-Category: Advertising
-Insertion: 1889-09-28 | KatoombaTimes | 3 | 194113095
-Insertion: 1889-10-05 | KatoombaTimes | 3 | 194110603
-DateUpdated: 2015-08-22
-Precis: The surveyor and Mr. Goyder have marked out the racecourse; buy Leura land now.
+title: The Proposed New Racecourse Has Been Surveyed
+key: 194113095a
+category: Advertising
+date_updated: 2015-08-22
+precis: The surveyor and Mr. Goyder have marked out the racecourse; buy Leura land now.
 
-#estate-sale
-#racecourse
-#eyre-william
-#goyder
+tags:
+    - estate-sale
+    - racecourse
+    - eyre-william
+    - goyder
+
+insertions:
+    - date       : 1889-09-28
+      publication: KatoombaTimes
+      page       : 3
+      trove_id   : 194113095
+    - date       : 1889-10-05
+      publication: KatoombaTimes
+      page       : 3
+      trove_id   : 194110603

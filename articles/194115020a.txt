@@ -1,14 +1,20 @@
-Title: Katoomba Jockey Club
-Key: 194115020a
-Category: Article
-Insertion: 1889-06-22 | KatoombaTimes | 2 | 194115020
-DateUpdated: 2015-08-13
-Precis: Report of a meeting to form a Jockey Club and determine the location of the new racecourse. Further investigation was recommended.
+title: Katoomba Jockey Club
+key: 194115020a
+category: Article
+date_updated: 2015-08-13
+precis: Report of a meeting to form a Jockey Club and determine the location of the new racecourse. Further investigation was recommended.
 
-#racecourse
-#eyre-william
-#goyder
-#palmerston-estate
+tags:
+    - racecourse
+    - eyre-william
+    - goyder
+    - palmerston-estate
+
+insertions:
+    - date       : 1889-06-22
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194115020
 ----
 # Katoomba Jockey Club.
 

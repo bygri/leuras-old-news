@@ -1,17 +1,23 @@
 #!/bin/sh
-# $1 is the Trove ID. $2 is the letter.
+# $1 is the Trove ID. $2 is the sequence letter.
 DATE=`date +%Y-%m-%d`
 sips -s format jpeg -s formatOptions normal *.png --out $1$2.jpg
 open $1$2.jpg
 cat > $1$2.txt <<EOL
-Title:
-Key: ${1}${2}
-Category:
-Insertion: 1889 | KatoombaTimes | p | ${1}
-DateUpdated: ${DATE}
-Precis:
+title       :
+key         : ${1}${2}
+category    :
+date_updated: ${DATE}
+precis      :
 
-#
+tags:
+    -
+
+insertions:
+    - date       :
+    - publication: Katoombatimes
+    - page       :
+    - trove_id   : ${1}
 EOL
 choc $1$2.txt
 read -p "Press [Enter] when editing is complete, or Ctrl-C to cancel."

@@ -1,4 +1,4 @@
-Title: Enigma
-Key: enigma
-Category: Other
-Precis: Articles I don't understand.
+title: Enigma
+key: enigma
+category: Other
+precis: Articles I don't understand.

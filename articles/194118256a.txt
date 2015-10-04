@@ -1,8 +1,14 @@
-Title: I.O.G.T. Grand Picnic and Procession at Leura
-Key: 194118256a
-Category: Advertising
-Insertion: 1889-12-07 | KatoombaTimes | 2 | 194118256
-DateUpdated: 2015-09-10
-Precis: Advertising the Good Templars' picnic at Leura on New Year's Day.
+title: I.O.G.T. Grand Picnic and Procession at Leura
+key: 194118256a
+category: Advertising
+date_updated: 2015-09-10
+precis: Advertising the Good Templars' picnic at Leura on New Year's Day.
 
-#good-templars
+tags:
+    - good-templars
+
+insertions:
+    - date       : 1889-12-07
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194118256
