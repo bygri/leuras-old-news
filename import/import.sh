@@ -14,10 +14,10 @@ tags:
     -
 
 insertions:
-    - date       :
-    - publication: Katoombatimes
-    - page       :
-    - trove_id   : ${1}
+    - date       : 1890-
+      publication: KatoombaTimes
+      page       :
+      trove_id   : ${1}
 EOL
 choc $1$2.txt
 read -p "Press [Enter] when editing is complete, or Ctrl-C to cancel."

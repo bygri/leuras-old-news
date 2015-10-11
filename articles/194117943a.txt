@@ -1,0 +1,19 @@
+title       : Polling will take place
+key         : 194117943a
+category    : Advertising
+date_updated: 2015-10-11
+precis      : Lists candidates for alderman and records the election date as 18th January 1890.
+
+tags:
+    - municipality
+    - eyre-william
+
+insertions:
+    - date       : 1890-01-11
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194117943
+    - date       : 1890-01-18
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194111390

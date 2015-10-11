@@ -1,0 +1,22 @@
+title       : Land on Leura on easy terms (Poultry farm)
+key         : 194111142a
+category    : Advertising
+date_updated: 2015-10-11
+precis      : O'Regan's poultry farm ad includes land in Leura.
+
+tags:
+    - estate-sale
+
+insertions:
+    - date       : 1890-01-04
+      publication: KatoombaTimes
+      page       : 1
+      trove_id   : 194111142
+    - date       : 1890-01-11
+      publication: KatoombaTimes
+      page       : 3
+      trove_id   : 194117961
+    - date       : 1890-01-18
+      publication: KatoombaTimes
+      page       : 3
+      trove_id   : 194111388
