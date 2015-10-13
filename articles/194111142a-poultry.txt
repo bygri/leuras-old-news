@@ -20,3 +20,20 @@ insertions:
       publication: KatoombaTimes
       page       : 3
       trove_id   : 194111388
+    - date       : 1890-01-25
+      publication: KatoombaTimes
+      page       : 3
+      trove_id   : 194110332
+    - date       : 1890-01-25
+      publication: KatoombaTimes
+      page       : 4
+      trove_id   : 194110324
+    - date       : 1890-02-01
+      publication: KatoombaTimes
+      page       : 4
+      trove_id   : 194117774
+    - date       : 1890-02-08
+      publication: KatoombaTimes
+      page       : 3
+      trove_id   : 194113164
+  
