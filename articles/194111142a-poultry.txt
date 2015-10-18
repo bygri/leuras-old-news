@@ -36,4 +36,7 @@ insertions:
       publication: KatoombaTimes
       page       : 3
       trove_id   : 194113164
-  
+    - date       : 1890-02-15
+      publication: KatoombaTimes
+      page       : 3
+      trove_id   : 194112395
