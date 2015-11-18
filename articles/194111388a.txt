@@ -1,4 +1,4 @@
-title       : William Eyre is ffering himself as a candidate for election as Alderman
+title       : William Eyre is offering himself as a candidate for election as Alderman
 key         : 194111388a
 category    : Advertising
 date_updated: 2015-10-11

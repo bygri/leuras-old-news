@@ -44,6 +44,10 @@ insertions:
       publication: KatoombaTimes
       page       : 4
       trove_id   : 194112767
+    - date       : 1890-03-22
+      publication: KatoombaTimes
+      page       : 4
+      trove_id   : 194114459
 ----
 # Views on the Blue Mountains
 

@@ -1,0 +1,14 @@
+title       : The railway line where the slip occurred
+key         : 194114418c
+category    : jottings
+date_updated: 2015-11-18
+precis      : The failed embankment between Katoomba and Leura has been repaired.
+
+tags:
+    - railway
+
+insertions:
+    - date       : 1890-03-22
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194114418

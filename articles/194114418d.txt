@@ -1,0 +1,14 @@
+title       : Where the railway slip occurred
+key         : 194114418d
+category    : jottings
+date_updated: 2015-11-18
+precis      : A workman is reported to have known about the potentially dangerous embankment between Leura and Katoomba for a year before it failed.
+
+tags:
+    - railway
+
+insertions:
+    - date       : 1890-03-22
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194114418
