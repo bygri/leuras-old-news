@@ -1,0 +1,14 @@
+title       : An embankment between Katoomba and Leura gave way
+key         : 194110810a
+category    : jottings
+date_updated: 2015-11-18
+precis      : After incredibly heavy rains, a landslide occurred between the two towns.
+
+tags:
+    - enigma
+
+insertions:
+    - date       : 1890-03-15
+      publication: KatoombaTimes
+      page       : 3
+      trove_id   : 194110810

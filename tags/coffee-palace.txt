@@ -1,0 +1,4 @@
+title: Leura Coffee Palace
+key: coffee-palace
+category: Business
+precis: A guesthouse built 1892 and situated on the Mall. Now the Ritz.
