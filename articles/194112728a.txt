@@ -1,0 +1,14 @@
+title       : Wentworth, Katoomba, Leura and Guiva Falls present picturesque views
+key         : 194112728a
+category    : Jottings
+date_updated: 2015-12-06
+precis      : After massive rains, the waterfalls in Leura and around the mountains look particularly good.
+
+tags:
+    - leura-falls
+
+insertions:
+    - date       : 1890-04-12
+      publication: KatoombaTimes
+      page       : 4
+      trove_id   : 194112728

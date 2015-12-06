@@ -1,0 +1,15 @@
+title       : Board was very cheap at Leura Villa
+key         : 194112729a
+category    : Jottings
+date_updated: 2015-12-06
+precis      : I really don't know.
+
+tags:
+    - gladstone-estate
+    - enigma
+
+insertions:
+    - date       : 1890-04-12
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194112729

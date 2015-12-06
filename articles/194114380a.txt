@@ -1,0 +1,14 @@
+title       : Lovely sample of Mountain grown apples
+key         : 194114380a
+category    : Jottings
+date_updated: 2015-12-06
+precis      : Eyre took some Mountains apples to sell in Sydney.
+
+tags:
+    - eyre-william
+
+insertions:
+    - date       : 1890-03-29
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194114380
