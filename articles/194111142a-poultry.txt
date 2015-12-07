@@ -72,3 +72,7 @@ insertions:
       publication: KatoombaTimes
       page       : 3
       trove_id   : 194112732
+    - date       : 1890-04-19
+      publication: KatoombaTimes
+      page       : 3
+      trove_id   : 194116572

@@ -1,0 +1,14 @@
+title       : Railway surveyors were measuring land
+key         : 194116580a
+category    : Jottings
+date_updated: 2015-12-08
+precis      : Mentions a dangerous gully at Leura when locating the Katoomba railway siding.
+
+tags:
+    - railway
+
+insertions:
+    - date       : 1890-04-19
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194116580
