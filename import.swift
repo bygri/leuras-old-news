@@ -1,9 +1,9 @@
 #!/usr/bin/swift
 import AppKit
 
-if Process.arguments.count != 3 {
+guard Process.arguments.count == 3 else {
     print("Usage: ./import.swift [troveId] [sequenceLetter]")
-    exit(1)
+    exit(-1)
 }
 // Determine the 'key'
 let troveId = Process.arguments[1]
@@ -70,8 +70,9 @@ do {
         NSURL(string: "\(key).jpg", relativeToURL: importPathURL)!,
         toURL: NSURL(string: "\(key).jpg", relativeToURL: imagesPathURL)!
     )
+    print("PNG file name: \(pngFileName)")
     try fm.removeItemAtURL(
-        NSURL(string: pngFileName, relativeToURL: importPathURL)!
+        NSURL(string: pngFileName.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet()), relativeToURL: importPathURL)!
     )
 } catch {
     print("Moving and deleting files failed")
