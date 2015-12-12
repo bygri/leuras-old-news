@@ -8,7 +8,7 @@ tags:
     - leura-falls
 
 insertions:
-    - date       : 1890-10-05
+    - date       : 1890-05-10
       publication: KatoombaTimes
       page       : 2
       trove_id   : 194117831
