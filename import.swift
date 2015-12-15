@@ -72,7 +72,7 @@ do {
     )
     print("PNG file name: \(pngFileName)")
     try fm.removeItemAtURL(
-        NSURL(string: pngFileName.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet()), relativeToURL: importPathURL)!
+        NSURL(string: pngFileName.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!, relativeToURL: importPathURL)!
     )
 } catch {
     print("Moving and deleting files failed")

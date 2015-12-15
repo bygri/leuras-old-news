@@ -1,0 +1,14 @@
+title       : What may be expected at the Leura Hotel and Coffee Palace
+key         : 194111866b
+category    : Advertising
+date_updated: 2015-12-14
+precis      : Describes the proposed Coffee Palace which would be an alcohol-free home for music and dancing without police oversight.
+
+tags:
+    - coffee-palace
+
+insertions:
+    - date       : 1890-05-24
+      publication: KatoombaTimes
+      page       : 3
+      trove_id   : 194111866

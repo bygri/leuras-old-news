@@ -1,0 +1,14 @@
+title       : Prospectus of the Leura Hotel and Coffee Palace Coy
+key         : 194111866a
+category    : Advertising
+date_updated: 2015-12-14
+precis      : Overview of why an investor would want to purchase shares in the proposed Coffee Palace.
+
+tags:
+    - coffee-palace
+
+insertions:
+    - date       : 1890-05-24
+      publication: KatoombaTimes
+      page       : 3
+      trove_id   : 194111866

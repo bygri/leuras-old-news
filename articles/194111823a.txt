@@ -1,0 +1,14 @@
+title       : Already taken up 3000 shares
+key         : 194111823a
+category    : Jottings
+date_updated: 2015-12-14
+precis      : 3000 shares in the Leura Coffee Palace have already been requested.
+
+tags:
+    - coffee-palace
+
+insertions:
+    - date       : 1890-05-24
+      publication: KatoombaTimes
+      page       : 2
+      trove_id   : 194111823
