@@ -1,0 +1,14 @@
+{
+  "title":        "The Man that Built His House Upon a Rock",
+  "category":     "Advertising",
+  "date_updated": "2015-08-19",
+  "precis":       "Eyre reports high resale values in Leura Estate.",
+  "tags": [
+    "estate-sale",
+    "eyre-william",
+  ],
+  "insertions": [
+    {"date": "1889-08-24", "publication": "KatoombaTimes", "page": 3, "trove_id": 194116754},
+    {"date": "1889-08-31", "publication": "KatoombaTimes", "page": 3, "trove_id": 194115292},
+  ],
+}

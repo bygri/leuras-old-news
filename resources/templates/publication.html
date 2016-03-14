@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}{{publication__title}} | Leura's Old News{% endblock %}
+{% block meta_description %}A list of articles relating to Leura in {{publication__title}}.{% endblock %}
+{% block breadcrumb %}<li>Articles in {{publication__title}}</li>{% endblock %}
+
+{% block content %}
+    <div class='row'>
+        <div class='col-xs-12'>
+            <p>Below is a chronological list of articles in the publication {{publication__title}}.</p>
+            {% for insertion in insertions %}
+            {% dateHeader insertion.date h2 %}
+            <p>
+                {% if insertion.is_reprint %}[Reprint]{% endif %}
+                <a href='{{insertion.article__url}}'>{{insertion.article__title}}</a>.
+                {{insertion.article__category}}. {{insertion.date|dateformat}}, <i>{{insertion.publication__title}}</i>, p{{insertion.page}}.
+                <br><i>{{insertion.article__precis}}</i>
+            </p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

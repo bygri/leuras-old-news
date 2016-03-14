@@ -1,4 +1,0 @@
-title: Sale of Leura Estate
-key: estate-sale
-category: Event
-precis: The original subdivision and sale of the Leura Estate.

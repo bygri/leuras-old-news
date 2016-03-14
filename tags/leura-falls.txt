@@ -1,4 +1,0 @@
-title: Leura Falls
-key: leura-falls
-category: Place
-precis: Also the Meeting of the Waters, now the Cascades.

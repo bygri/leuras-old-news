@@ -1,4 +1,0 @@
-title: Tennyson Avenue
-key: tennyson-avenue
-category: Place
-precis: Originally Tusculum Avenue.

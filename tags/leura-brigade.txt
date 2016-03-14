@@ -1,4 +1,0 @@
-title: Leura Brigade
-key: leura-brigade
-category: Group
-precis: A group of old ladies of an unknown religious group.

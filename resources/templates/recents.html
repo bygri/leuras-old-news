@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Recently Added | Leura's Old News{% endblock %}
+{% block breadcrumb %}<li>Latest Articles</li>{% endblock %}
+
+{% block content %}
+    <div class='row'>
+        <div class='col-xs-12'>
+            {% for article in articles %}
+            {% dateHeader article.dateUpdated h2 %}
+            <p>
+                <a href='{{article.url}}'>{{article.title}}</a>.
+                {{article.category}}. {{article.firstInsertion__date|dateformat}}, <i>{{article.firstInsertion__publication__title}}</i>, p{{article.firstInsertion__page}}.
+                <br><i>{{article.precis}}</i>
+            </p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

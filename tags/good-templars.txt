@@ -1,3 +1,0 @@
-title: Good Templars
-key: good-templars
-category: Group

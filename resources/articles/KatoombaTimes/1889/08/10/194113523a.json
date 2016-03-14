@@ -1,0 +1,16 @@
+{
+  "title":        "The Katoomba Racing Club",
+  "category":     "Advertising",
+  "date_updated": "2015-08-18",
+  "precis":       "In advertising Leura land, Eyre reprints a letter from Lord Carrington re the racecourse.",
+  "tags": [
+    "racecourse",
+    "estate-sale",
+    "eyre-william",
+    "lord-carrington",
+  ],
+  "insertions": [
+    {"date": "1889-08-10", "publication": "KatoombaTimes", "page": 3, "trove_id": 194113523},
+    {"date": "1889-08-17", "publication": "KatoombaTimes", "page": 4, "trove_id": 194117208},
+  ],
+}

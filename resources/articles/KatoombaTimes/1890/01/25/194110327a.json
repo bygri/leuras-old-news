@@ -1,0 +1,13 @@
+{
+  "title":        "The First Election",
+  "category":     "Article",
+  "date_updated": "2015-10-13",
+  "precis":       "The first election of the Municipality of Katoomba has taken place; F. C. Goyder became mayor and William Eyre got the wooden spoon.",
+  "tags": [
+    "municipality",
+    "eyre-william",
+  ],
+  "insertions": [
+    {"date": "1890-01-25", "publication": "KatoombaTimes", "page": 2, "trove_id": 194110327},
+  ],
+}

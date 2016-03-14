@@ -1,0 +1,12 @@
+{
+  "title":        "A coffee palace is to be established",
+  "category":     "Jottings",
+  "date_updated": "2015-11-18",
+  "precis":       "First mention of a coffee palace, though it sites it in Katoomba.",
+  "tags": [
+    "coffee-palace",
+  ],
+  "insertions": [
+    {"date": "1890-03-08", "publication": "KatoombaTimes", "page": 3, "trove_id": 194112777},
+  ],
+}

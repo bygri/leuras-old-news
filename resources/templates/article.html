@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}{{article__title}} | Leura's Old News{% endblock %}
+{% block meta_description %}{{article__precis}}{% endblock %}
+
+{% block breadcrumb %}<li>{{article__title}}</li>{% endblock %}
+
+{% block content %}
+    <div class='row'>
+        <div class='col-xs-12'>
+            <p>
+                {{firstInsertion__date|dateformat}}, <i>{{firstInsertion__publication__title}}</i>, p{{firstInsertion__page}}.
+            </p>
+            {% for insertion in reprintInsertions %}
+            <p>
+                {{insertion.date|dateformat}}, <i>{{insertion.publication__title}}</i>, p{{insertion.page}}.
+                [Reprint].
+            </p>
+            {% endfor %}
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-sm-8'>
+            {% if article__imageURL %}
+            <a href='{{article__imageURL}}' class='thumbnail'>
+                <img src='{{article__imageURL}}'>
+            </a>
+            {% endif %}
+            {% if article__fullText %}
+            <article class='article'>
+                {{article__fullText|markdown}}
+            </article>
+            {% else %}
+            <div class='article'>
+                <h2>No transcription available.</h2>
+                <p>Would you like to contribute one? Use the Facebook or Github
+                    links at the bottom of the page.</p>
+            </div>
+            {% endif %}
+        </div>
+        <div class='col-sm-4'>
+            <div class="panel panel-default">
+              <div class='panel-body'>
+                <p><b>Tagged topics</b></p>
+                {% for tag in tags %}
+                <p>
+                    <span class='fa {{ tag.category|categoryIconClass }}'></span>
+                    <a href='{{tag.url}}'>{{tag.title}}</a>
+                </p>
+                {% endfor %}
+                <p><b>View on Trove</b></p>
+
+                <p><a href='http://nla.gov.au/nla.news-article{{firstInsertion__troveId}}'>{{firstInsertion__date|dateformat}}</a></p>
+                {% for insertion in reprintInsertions %}
+                <p><a href='http://nla.gov.au/nla.news-article{{insertion.troveId}}'>{{insertion.date|dateformat}}</a></p>
+                {% endfor %}
+                <p><b>More in this publication</b></p>
+                <p><a href='{{firstInsertion__publication__url}}'>{{firstInsertion__publication__title}}</a></p>
+              </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

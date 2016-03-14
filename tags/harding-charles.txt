@@ -1,4 +1,0 @@
-title: Harding, Charles
-key: harding-charles
-category: Person
-precis: Architect of the Burlington Palace Hotel.

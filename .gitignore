@@ -1,3 +1,4 @@
-env
+.build
+Packages
 www
-deploy.sh
+*.pyc

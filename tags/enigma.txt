@@ -1,4 +1,0 @@
-title: Enigma
-key: enigma
-category: Other
-precis: Articles I don't understand.

@@ -1,0 +1,17 @@
+{
+  "title":        "Good News for Leura",
+  "category":     "Advertising",
+  "date_updated": "2015-09-10",
+  "precis":       "Extensive sales pitch based around the confirmed Leura Platform and Siding, and a Grand Picnic to celebrate its completion.",
+  "tags": [
+    "estate-sale",
+    "railway",
+    "eyre-william",
+  ],
+  "insertions": [
+    {"date": "1889-11-30", "publication": "KatoombaTimes", "page": 3, "trove_id": 194112204},
+    {"date": "1889-12-07", "publication": "KatoombaTimes", "page": 1, "trove_id": 194118257},
+    {"date": "1889-12-14", "publication": "KatoombaTimes", "page": 1, "trove_id": 194114507},
+    {"date": "1889-12-21", "publication": "KatoombaTimes", "page": 1, "trove_id": 194110927},
+  ],
+}

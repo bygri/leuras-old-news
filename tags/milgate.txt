@@ -1,3 +1,0 @@
-title: Milgate
-key: milgate
-category: Person

@@ -1,3 +1,0 @@
-title: Gladstone Estate
-key: gladstone-estate
-category: Place

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}{{tag__title}} | Leura's Old News{% endblock %}
+{% block meta_description %}{{tag__precis}}{% endblock %}
+{% block breadcrumb %}<li>Articles for {{tag__title}}</li>{% endblock %}
+
+{% block content %}
+    <div class='row'>
+        <div class='col-xs-12'>
+            <p>Below is a chronological list of articles tagged {{tag__title}}.</p>
+            {% for article in articles %}
+            {% dateHeader article.firstInsertion__date h2 %}
+            <p>
+                <a href='{{article.url}}'>{{article.title}}</a>.
+                {{article.category}}. {{article.firstInsertion__date|dateformat}}, <i>{{article.firstInsertion__publication__title}}</i>, p{{article.firstInsertion__page}}.
+                {{article.reprintCountString}}
+                <br><i>{{article.precis}}</i>
+            </p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

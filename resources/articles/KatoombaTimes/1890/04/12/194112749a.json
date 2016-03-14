@@ -1,0 +1,13 @@
+{
+  "title":        "Katoomba Municipal Council",
+  "category":     "Article",
+  "date_updated": "2015-12-06",
+  "precis":       "Report on a Council meeting with passing mentions of William Eyre and Leura Falls, along with an amusing exchange about night soil.",
+  "tags": [
+    "eyre-william",
+    "leura-falls",
+  ],
+  "insertions": [
+    {"date": "1890-04-12", "publication": "KatoombaTimes", "page": 4, "trove_id": 194112749},
+  ],
+}
