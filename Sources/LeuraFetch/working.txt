@@ -1,0 +1,91 @@
+HERE IS THE WORKING METHOD
+
+IF DOING AN ISSUE
+
+1) receive an Issue id
+  - fetch HEAD and see where I am relocated to. That's my first page.
+
+2) fetch PAGE url
+  - get the 'startingUri' for the Browse service
+  - from this we can get the issue JSON url for the Browse service
+
+3) fetch ISSUE JSON url
+  - parse pages from it and then run the page fetch routine for each
+
+IF DOING A PAGE
+
+1) fetch PAGE url
+  - get the 'startingUri' for the Browse service
+  - from this we can get the article JSON url for the Browse service
+
+2) fetch ARTICLE json url
+  - parse the articles from it
+
+3) fetch IMAGE data url
+  - find out the image bounds
+
+4) fetch all TILES
+  - stitch them together
+
+
+
+We have an ISSUE link like this:
+  http://trove.nla.gov.au/ndp/del/issue/1881662
+
+curl -i http://trove.nla.gov.au/ndp/del/issue/1881662
+HTTP/1.1 302 Moved Temporarily
+Location: http://trove.nla.gov.au/newspaper/issue/1881662
+
+It will 302 redirect us to a PAGE like this:
+  http://trove.nla.gov.au/newspaper/page/21704646
+
+The page HTML gives us this line:
+  startingUri = "ndp:browse/title/K/title/906/189/1890/05/31/page/21704647";
+  which actually means
+  http://trove.nla.gov.au/newspaper/browse?uri=ndp:browse/title/K/title/906/189/1890/05/31/page/21704647
+  which provides us with a JSON listing of all articles in the page
+
+or THIS:
+  http://trove.nla.gov.au/newspaper/browse?uri=ndp:browse/title/K/title/906/189/1890/05/31
+  giving us all pages in the issue
+
+
+
+image info is loaded from:
+  http://trove.nla.gov.au/newspaper/image/info/21704646
+which gives us the following XML:
+  <image>
+    <prefix>tile-</prefix>
+    <extension>jpg</extension>
+    <width>4739</width>
+    <height>6243</height>
+    <tilesize>256</tilesize>
+    <blanktile>tile-blank.jpg</blanktile>
+    <thumb>thumb.jpg</thumb>
+    <print>page.pdf</print>
+    <maxlevel>
+      <col>7</col>
+      <row>7</row>
+    </maxlevel>
+    <levels>
+      ...
+      <level id='6'>
+        <colmin>1</colmin>
+        <colmax>14</colmax>
+        <rowmin>0</rowmin>
+        <rowmax>15</rowmax>
+        <width>3080</width>
+        <height>4058</height>
+        <xoffset>508</xoffset>
+        <yoffset>19</yoffset>
+        <scale>0.65</scale>
+      </level>
+      ...
+    </levels>
+  </image>
+
+
+This is the tile URL format:
+  http://trove.nla.gov.au/ndp/imageservice/nla.news-page21704646/tile6-1-0
+  that is tile[ZOOM]-[X]-[Y]
+  with x and y being measured from the top-left. There is also an offset!
