@@ -10,7 +10,7 @@ def r():
     '''
     Run.
     '''
-    local('.build/debug/leurasoldnews fetch')
+    local('.build/debug/leurasoldnews fetch 1881608')
 
 def c():
     '''

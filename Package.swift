@@ -30,5 +30,6 @@ let package = Package(
     .Package(url: "https://github.com/kylef/Stencil.git", majorVersion: 0, minor: 5),
     // .Package(url: "https://github.com/daltoniam/SwiftHTTP", majorVersion: 1),
     .Package(url: "https://github.com/johnlui/Pitaya.git", versions: "1.3.4" ..< Version.max),
+    .Package(url: "https://github.com/drmohundro/SWXMLHash", majorVersion: 2, minor: 1),
   ]
 )
