@@ -7,18 +7,18 @@ import SWXMLHash
   This fetches a Trove issue.
 */
 
-enum Zoom: Int {
+private enum Zoom: Int {
   case Level2 = 2
   case Level4 = 4
   case Level5 = 5
   case Level6 = 6
   case Level7 = 7
   static func defaultZoom() -> Zoom {
-    return Zoom.Level6
+    return Zoom.Level7
   }
 }
 
-enum Trove {
+private enum Trove {
   case Issue(id: Int)
   case Page(id: Int)
   case ImageInfo(pageId: Int)
@@ -38,17 +38,19 @@ enum Trove {
   }
 }
 
-struct Issue {
+private struct Issue {
   let id: Int
   let pageIds: [Int]
+  let title: String
+  let dateString: String
 }
-struct Page {
+private struct Page {
   let id: Int
   let issueId: Int
   let articles: [Article]
   let image: ImageInfo
 }
-struct ImageInfo {
+private struct ImageInfo {
   let tileSize: Int
   let colMin: Int
   let colMax: Int
@@ -66,12 +68,12 @@ struct ImageInfo {
     return y * tileSize - yOffset
   }
 }
-struct Article {
+private struct Article {
   let id: Int
   let title: String
 }
 
-func findNDPStartingUriInString(body: String) -> String {
+private func findNDPStartingUriInString(body: String) -> String {
   var startingUri: NSString?
   let scanner = NSScanner(string: body)
   scanner.scanUpToString("startingUri = \"", intoString: nil)
@@ -80,7 +82,7 @@ func findNDPStartingUriInString(body: String) -> String {
   return startingUri as! String
 }
 
-func fetchIssue(id: Int) -> Issue {
+private func fetchIssue(id: Int) -> Issue {
   /*
   This is reasonably complicated.
   1) Fetch the Issue HTML. We will be 302 Redirected to the first Page HTML.
@@ -105,15 +107,17 @@ func fetchIssue(id: Int) -> Issue {
   let issueDataUri = issueDataUriComponents.joinWithSeparator("/")
   let (_, issueDataBody) = URLLoad.get("http://trove.nla.gov.au/newspaper/browse?uri="+issueDataUri)
   let json = JSON(data: issueDataBody.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!)
+  let title = json["dc:title"].stringValue.componentsSeparatedByString(" :").first!
+  let dateString = json["dc:description"].stringValue
   var pageIds: [Int] = []
   for (_, pageJson) in json["skos:narrower"] {
     let idString = pageJson["ndp:uri"].stringValue.componentsSeparatedByString("/").last!
     pageIds.append(Int(idString)!)
   }
-  return Issue(id: id, pageIds: pageIds)
+  return Issue(id: id, pageIds: pageIds, title: title, dateString: dateString)
 }
 
-func fetchPage(id: Int, issueId: Int) -> Page {
+private func fetchPage(id: Int, issueId: Int) -> Page {
   /*
   1) Fetch the Page HTML. Find out my ndp: url.
   2) Fetch Article NDP json and parse the articles from it.
@@ -150,7 +154,21 @@ func fetchPage(id: Int, issueId: Int) -> Page {
   return Page(id: id, issueId: issueId, articles: articles, image: imageInfo)
 }
 
-func savePageArticles(page: Page) {
+private func saveIssueJson(issue: Issue) {
+  let fm = NSFileManager.defaultManager()
+  let path = "fetch/\(issue.id)/"
+  try! fm.createDirectoryAtPath(path, withIntermediateDirectories: true, attributes: nil)
+  let obj = [
+    "id": issue.id,
+    "pageIds": issue.pageIds,
+    "title": issue.title,
+    "date": issue.dateString,
+  ]
+  let json = try! NSJSONSerialization.dataWithJSONObject(obj, options: .PrettyPrinted)
+  fm.createFileAtPath(path+"issue.json", contents: json, attributes: nil)
+}
+
+private func savePageJson(page: Page) {
   let fm = NSFileManager.defaultManager()
   let path = "fetch/\(page.issueId)/"
   try! fm.createDirectoryAtPath(path, withIntermediateDirectories: true, attributes: nil)
@@ -160,7 +178,7 @@ func savePageArticles(page: Page) {
   fm.createFileAtPath(path+"\(page.id).json", contents: json, attributes: nil)
 }
 
-func savePageImage(page: Page) {
+private func savePageImage(page: Page) {
   // Fetch all ImageTiles and stitch them.
   // The final image will be saved in "/fetch/ISSUEID/PAGEID.jpg"
   let zoom = Zoom.defaultZoom()
@@ -198,11 +216,13 @@ public func fetch() {
   }
   print("Fetching issue with ID \(issueId)".style.Bold)
   let issue = fetchIssue(issueId)
+  saveIssueJson(issue)
+  // exit(0)
   print(" - found pages \(issue.pageIds)")
   for pageId in issue.pageIds {
     print("Page \(pageId)".style.Bold)
     let page = fetchPage(pageId, issueId: issue.id)
-    savePageArticles(page)
+    savePageJson(page)
     savePageImage(page)
   }
 }
