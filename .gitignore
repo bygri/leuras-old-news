@@ -1,4 +1,3 @@
-.build
-Packages
-www
-*.pyc
+node_modules
+
+dist
