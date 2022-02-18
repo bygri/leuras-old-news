@@ -1,0 +1,22 @@
+body {
+  font-family: "Droid Serif";
+  color: #444;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+h1, h2, h3 {
+  font-family: Montserrat;
+}
+h2 { font-size: 18px; }
+h3 { font-size: 14px; }
+div.article h1 {
+  font-size: 24px;
+}
+
+footer.page {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+  font-size: 90%;
+}
